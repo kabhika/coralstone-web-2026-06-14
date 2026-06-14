@@ -3,18 +3,22 @@ import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "IT Support for Sydney small business",
+  title: "IT Support & Security for Sydney small business",
   description:
-    "On-site and remote IT support across Greater Sydney. Computer setup and security, on-site backup, ransomware protection, Microsoft 365 migration, and hardware upgrades. No lock-in.",
+    "On-site and remote IT support across Greater Sydney: computer setup and security, office networks, NAS backup, ransomware protection, cloud and database migration, Microsoft 365, hardware upgrades, office relocation, and automation. No lock-in.",
 };
 
 const services = [
-  ["💻", "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched, encrypted, and protected from one dashboard. Staff start their first day ready to work.", "Endpoint management / Intune"],
+  ["💻", "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched, encrypted, and protected from one dashboard. Staff start their first day ready to work.", "Endpoint management / Intune / EUC"],
   ["🛡️", "Protect against scams & ransomware", "Practical defences against the phishing and ransomware actually hitting Australian small businesses, aligned to the government's Essential Eight guidance.", "Endpoint security"],
+  ["🌐", "Set up your office network", "Reliable Wi-Fi and wired networks, business internet, and tidy structured cabling. The plumbing that everything else depends on, done once and done right.", "Network & connectivity"],
   ["💾", "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, kept separate from your cloud. A crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
-  ["☁️", "Move to Microsoft 365 or Google", "Email, files, and accounts moved across with no lost data and no downtime, then set up the way it should have been the first time.", "M365 / Google migration"],
+  ["☁️", "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime, then set up the way it should have been the first time.", "Cloud migration / M365"],
+  ["🗄️", "Move and modernise your databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely and with a clear rollback plan.", "Database migration"],
+  ["📦", "Move or open an office", "Full IT relocation: we plan, disconnect, move, and reconnect your whole setup so you are running again the next morning, not next week.", "Office IT relocation"],
   ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add three or more years to a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
-  ["🔧", "On-site help when you need it", "A real person who comes to you across Greater Sydney for setups, office relocations, network issues, and the things that just break.", "Ad-hoc & managed support"],
+  ["🤖", "Automate the busywork", "Connect the tools you already use so quotes, invoices, reminders, and follow-ups happen on their own. Practical automation, not buzzwords.", "AI & workflow automation"],
+  ["🔧", "On-site & ongoing support", "A real person who comes to you across Greater Sydney for setups and the things that just break, plus optional proactive monthly care.", "Ad-hoc & managed support"],
 ];
 
 export default function ITSupport() {
@@ -27,7 +31,7 @@ export default function ITSupport() {
       />
 
       <section>
-        <div className="wrap py-[72px]">
+        <div className="wrap py-[64px]">
           <div className="cards">
             {services.map(([ico, h, p, tech]) => (
               <div key={h} className="card reveal">

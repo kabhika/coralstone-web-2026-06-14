@@ -128,9 +128,12 @@ export default function Home() {
             {[
               ["💻", "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched and protected, from one dashboard.", "Endpoint management / Intune"],
               ["🛡️", "Protect against scams & ransomware", "Practical defences against the phishing and ransomware actually hitting Australian small businesses, aligned to the Essential Eight.", "Endpoint security"],
+              ["🌐", "Set up your office network", "Reliable Wi-Fi and wired networks, business internet, and tidy structured cabling. Done once and done right.", "Network & connectivity"],
               ["💾", "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, so a crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
-              ["☁️", "Move to Microsoft 365 or Google", "Email, files, and accounts moved across with no lost data and no downtime. Set up the way it should have been.", "M365 / Google migration"],
-              ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add years to a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
+              ["☁️", "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime.", "Cloud migration / M365"],
+              ["🗄️", "Move and modernise databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely.", "Database migration"],
+              ["📦", "Move or open an office", "Full IT relocation, planned and executed so you are running again the next morning.", "Office IT relocation"],
+              ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add years to a machine for a fraction of replacing it.", "Hardware upgrades"],
               ["🔧", "On-site help when you need it", "A real person who comes to you across Greater Sydney for setups, office moves, and the things that just break.", "Ad-hoc & managed support"],
             ].map(([ico, h, p, tech]) => (
               <div key={h} className="card reveal">

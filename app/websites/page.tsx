@@ -15,6 +15,8 @@ const services = [
   ["🛒", "Sell online", "A full store: secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
   ["📅", "Take bookings automatically", "Customers book and pay online, with reminders handled for you. Fewer no-shows, less phone tag.", "Online booking"],
   ["💬", "Never miss a lead", "Missed-call text-back, instant first replies, and a site chat assistant so an enquiry never goes cold while you are on the tools.", "AI automation"],
+  ["✏️", "Update it yourself", "A simple editor so you can change text, swap photos, and add products without touching code or paying us for every tweak.", "Easy content management"],
+  ["📱", "Fast on every device", "Built mobile-first and tuned for speed. Google ranks fast, mobile-friendly sites higher, and so do impatient customers.", "Responsive & performance"],
 ];
 
 export default function Websites() {

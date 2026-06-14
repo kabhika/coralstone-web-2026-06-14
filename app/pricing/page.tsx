@@ -22,7 +22,7 @@ const web = [
     desc: "For businesses that want to rank on Google and bring in leads.",
     price: "$2,499",
     pop: true,
-    items: ["Everything in Starter", "Up to 15 pages", "Advanced SEO + AEO setup", "Analytics & Search Console", "Competitor keyword analysis", "Blog & speed optimisation"],
+    items: ["Everything in Starter", "Up to 15 pages", "Advanced SEO + AEO setup", "Analytics & Search Console", "Competitor keyword analysis", "Blog & speed optimisation", "Ongoing SEO from $300/mo (optional)"],
   },
   {
     name: "Online Store",
@@ -145,6 +145,7 @@ export default function Pricing() {
               </Tier>
             ))}
           </div>
+          <p className="reveal mt-6 text-center text-[.92rem] text-muted">Cloud and database migrations, office relocations, security setups, and automation builds are quoted as <b className="text-ink">fixed-scope projects</b>, with the price agreed before any work starts.</p>
         </div>
       </section>
 
