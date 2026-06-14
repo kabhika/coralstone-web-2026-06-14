@@ -55,8 +55,20 @@ export default function Contact() {
 
             {/* form */}
             <div className="reveal bg-paper border rounded-[24px] p-[34px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
-              {/* Static export: this posts to a form backend. Replace action with your Formspree/Web3Forms endpoint. */}
-              <form action="https://formspree.io/f/your-form-id" method="POST" className="grid gap-4">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                className="grid gap-4"
+              >
+                {/* Web3Forms access key — replace YOUR_ACCESS_KEY_HERE with the key from web3forms.com */}
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                {/* Redirect to branded thank-you page after submission */}
+                <input type="hidden" name="redirect" value="https://www.coralstonegroup.com.au/thank-you/" />
+                {/* Subject line in your inbox */}
+                <input type="hidden" name="subject" value="New enquiry — coralstonegroup.com.au" />
+                {/* Honeypot anti-spam */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <input name="first_name" required placeholder="First name" className="fld" />
                   <input name="last_name" placeholder="Last name" className="fld" />
