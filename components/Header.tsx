@@ -14,9 +14,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b backdrop-blur-md"
       style={{ background: "rgba(243,235,221,.82)", borderColor: "var(--line)" }}>
       <div className="wrap">
-        <nav className="flex items-center justify-between h-[72px]">
+        <nav className="flex items-center justify-between py-3 md:py-5">
           <Link href="/" className="flex items-center">
-            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-12 md:h-16 w-auto" priority />
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-24 md:h-40 w-auto" priority />
           </Link>
           <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
             {links.map((l) => (
