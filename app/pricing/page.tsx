@@ -147,7 +147,7 @@ export default function Pricing() {
                     {t.price2} <small className="text-[.78rem] font-sans text-muted font-medium">{t.price2Note}</small>
                   </div>
                 )}
-                <Link href={t.href} className="btn btn-ghost mt-5 justify-center w-full">{t.cta}</Link>
+                <Link href={t.href} className="btn btn-ghost mt-auto justify-center w-full">{t.cta}</Link>
               </Tier>
             ))}
           </div>
