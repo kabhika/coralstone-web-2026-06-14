@@ -15,9 +15,8 @@ export default function Header() {
       style={{ background: "rgba(243,235,221,.82)", borderColor: "var(--line)" }}>
       <div className="wrap">
         <nav className="flex items-center justify-between h-[72px]">
-          <Link href="/" className="flex items-center gap-3 font-display font-semibold text-[1.15rem] md:text-[1.35rem] text-ink">
-            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={158} height={100} className="h-12 md:h-[58px] w-auto" priority />
-            Coralstone
+          <Link href="/" className="flex items-center">
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={89} height={56} className="h-[56px] w-auto" priority />
           </Link>
           <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
             {links.map((l) => (
