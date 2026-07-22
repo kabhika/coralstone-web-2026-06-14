@@ -15,11 +15,11 @@ export default function Header() {
       style={{ background: "rgba(243,235,221,.82)", borderColor: "var(--line)" }}>
       <div className="wrap">
         <nav className="flex items-center justify-between h-[72px]">
-          <Link href="/" className="flex items-center gap-3 font-display font-semibold text-[1.15rem] text-ink">
-            <Image src="/logo.png" alt="Coralstone Services Group" width={120} height={75} className="h-10 w-auto" priority />
+          <Link href="/" className="flex items-center gap-3 font-display font-semibold text-[1.15rem] md:text-[1.35rem] text-ink">
+            <Image src="/logo.png" alt="Coralstone Services Group" width={120} height={75} className="h-10 md:h-[46px] w-auto" priority />
             Coralstone
           </Link>
-          <div className="hidden md:flex gap-[30px] font-medium text-[.95rem]">
+          <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
             {links.map((l) => (
               <Link key={l.href} href={l.href} className="text-charcoal/80 hover:text-ink transition">
                 {l.label}
