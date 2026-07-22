@@ -16,7 +16,7 @@ export default function Header() {
       <div className="wrap">
         <nav className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center gap-3 font-display font-semibold text-[1.15rem] md:text-[1.35rem] text-ink">
-            <Image src="/logo.png" alt="Coralstone Services Group" width={120} height={75} className="h-10 md:h-[46px] w-auto" priority />
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={158} height={100} className="h-12 md:h-[58px] w-auto" priority />
             Coralstone
           </Link>
           <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
