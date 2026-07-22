@@ -1,6 +1,38 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Zap, ShieldCheck, Search, Phone, Unlock, Wallet, FileText } from "lucide-react";
 import CTA from "@/components/CTA";
+
+const verticals = [
+  {
+    icon: Zap,
+    h: "AI Automation",
+    tag: "Never lose another lead",
+    p: "Missed-Call Rescue, instant replies, and quote follow-ups connect the tools you already use, so an enquiry never goes cold while you are on a job.",
+    href: "/ai-automation/",
+  },
+  {
+    icon: ShieldCheck,
+    h: "IT Support",
+    tag: "The boring tech that keeps you running, sorted",
+    p: "Backups, security, networks, and computers, managed by one local engineer who answers the phone himself. No ticket queue, no call centre.",
+    href: "/it-support/",
+  },
+  {
+    icon: Search,
+    h: "Websites and SEO",
+    tag: "Get found on Google and AI search",
+    p: "A fast, custom website built and structured so customers, and the AI assistants they ask, find you first. We assess this in your free audit.",
+    href: "/websites/",
+  },
+];
+
+const why = [
+  { icon: Phone, h: "A real engineer answers", p: "No ticket queue, no offshore call centre. You talk to the person doing the work." },
+  { icon: Unlock, h: "No lock-in contracts", p: "Stay because the work is good, not because you are trapped. Month to month, always." },
+  { icon: Wallet, h: "Pay when you are happy", p: "Missed-Call Rescue starts with a $497 setup. The rest of our work is quoted the same way, agreed before we start." },
+  { icon: FileText, h: "Fixed quotes, no jargon", p: "You get the scope and the price before anything starts, written in plain English." },
+];
 
 export default function Home() {
   return (
@@ -10,25 +42,24 @@ export default function Home() {
         <div className="wrap">
           <div className="grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center">
             <div>
-              <span className="tag reveal"><span className="dot" /> Sydney small business &middot; IT &amp; web</span>
+              <span className="tag reveal"><span className="dot" /> Missed-Call Rescue &middot; Greater Sydney</span>
               <h1 className="reveal text-ink mt-6" style={{ fontSize: "clamp(2.7rem,6vw,4.4rem)" }}>
-                Get found online.<br />Stay found.<br />
-                <span className="italic font-medium" style={{ color: "var(--coral)" }}>Never worry about the tech.</span>
+                A missed call does not wait.<br />
+                <span className="italic font-medium" style={{ color: "var(--coral)" }}>It just calls the next name on Google.</span>
               </h1>
-              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[34ch]">
-                Coralstone builds websites for Sydney small businesses that actually show up when customers search, on Google{" "}
-                <strong className="text-charcoal font-semibold">and</strong> on AI assistants like ChatGPT. Then we quietly handle the IT behind the scenes.
+              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[38ch]">
+                Most callers who reach your voicemail do not leave a message. Missed-Call Rescue sends every missed caller a text within seconds, so you are still in the running while you finish the job in front of you. A local engineer installs it on your existing number and takes care of it from there.
               </p>
               <div className="reveal flex flex-wrap gap-[14px] mt-8">
-                <Link className="btn btn-primary" href="/contact/">Get my free website &amp; Google check &rarr;</Link>
-                <Link className="btn btn-ghost" href="/websites/">See how it works</Link>
+                <a className="btn btn-primary" href="https://calendly.com/abhishek-sinha-coralstonegroup/30min">Get my free audit &rarr;</a>
+                <a className="btn btn-ghost" href="#how-it-works">See how it works</a>
               </div>
-              <p className="reveal mt-4 text-[.86rem] text-muted">No lock-in contracts. A real engineer answers the phone, not a call centre.</p>
+              <p className="reveal mt-4 text-[.86rem] text-muted">No lock-in. A local engineer sets it up, not a call centre reading a script.</p>
 
               <div className="reveal grid grid-cols-2 sm:grid-cols-4 mt-[46px] pt-6 border-t" style={{ borderColor: "var(--line)" }}>
                 {[
-                  ["Free", "Website & Google audit"],
-                  ["$400", "Deposit to start"],
+                  ["Free", "No-obligation audit"],
+                  ["$497", "To get started"],
                   ["No", "Lock-in contracts"],
                   ["Local", "On-site, Greater Sydney"],
                 ].map(([n, l], i) => (
@@ -44,13 +75,13 @@ export default function Home() {
               <div className="bg-paper border rounded-[24px] p-[30px] w-full max-w-[360px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
                 <Image src="/logo.png" alt="Coralstone" width={130} height={82} className="w-[130px] mx-auto mb-[18px]" />
                 {[
-                  ["A website that wins customers", "Built for you, not a template"],
-                  ["Found on Google & AI search", "SEO + AEO done properly"],
-                  ["Your tech, handled", "Backups, security, computers"],
-                  ["One local point of contact", "Pay the balance only when happy"],
+                  ["Instant text back", "Sent within seconds of a missed call"],
+                  ["Works on your number", "Call forwarding, nothing new to give out"],
+                  ["Set up by a real engineer", "Registered, tested, and monitored"],
+                  ["Every rescue logged", "One simple report, sent monthly"],
                 ].map(([b, s], i) => (
                   <div key={b} className={`flex items-center gap-3 py-[13px] ${i > 0 ? "border-t border-dashed" : ""}`} style={{ borderColor: "var(--line)" }}>
-                    <span className="flex-none w-6 h-6 rounded-full grid place-items-center text-[.8rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>✓</span>
+                    <span className="flex-none w-6 h-6 rounded-full grid place-items-center text-[.8rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>&#10003;</span>
                     <div><b className="font-semibold text-charcoal text-[.95rem]">{b}</b><span className="block text-[.8rem] text-muted">{s}</span></div>
                   </div>
                 ))}
@@ -60,21 +91,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* JOURNEY */}
-      <section style={{ background: "var(--ink)", color: "var(--sand)" }}>
+      {/* HOW IT WORKS */}
+      <section id="how-it-works" style={{ background: "var(--ink)", color: "var(--sand)" }}>
         <div className="wrap py-[84px]">
           <div className="sec-head reveal">
-            <span className="eyebrow" style={{ color: "#E9A07F" }}>Where most people start</span>
-            <h2 className="text-paper">A website is the foot in the door. Being found is the point.</h2>
+            <span className="eyebrow" style={{ color: "#E9A07F" }}>How it works</span>
+            <h2 className="text-paper">Three steps. Your phone number stays the same.</h2>
             <p style={{ color: "rgba(243,235,221,.72)" }}>
-              Most customers do not search for your business name. They search for what they need: &quot;plumber near me&quot;, &quot;best cafe Castle Hill&quot;, &quot;bookkeeper Western Sydney&quot;. We build the website, then make sure you are the answer they get.
+              Missed-Call Rescue runs quietly in the background on the number you already advertise. Nothing to reprint, nothing new to learn.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-[22px]">
             {[
-              ["1", "Build the website", "A fast, mobile-first site designed around your business, not a stock template. Clear, written for your customers, ready to take bookings or enquiries.", "Custom design"],
-              ["2", "Get on the map", "Google Business Profile, local search, and reviews set up so you appear when nearby customers are looking. The unglamorous work that actually brings calls.", "Local SEO"],
-              ["3", "Stay found, AI-ready", "We structure your site so AI assistants (ChatGPT, Google AI, Siri) can read it and recommend you. Most local sites are invisible to them. Yours will not be.", "AEO & GEO"],
+              ["1", "We forward your number", "Call forwarding on your existing business line detects the moment a call goes unanswered. No new number, no new SIM.", "Call forwarding"],
+              ["2", "The caller gets a text", "Within seconds, the missed caller receives a text letting them know you saw the call and will be in touch.", "Automatic SMS"],
+              ["3", "You get the report", "Every rescued call is logged. You receive a simple report each month showing what came in and what it was worth.", "Monthly report"],
             ].map(([n, h, p, pill]) => (
               <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
                 <div className="font-display text-[3.4rem] font-semibold leading-[.8]" style={{ color: "rgba(233,160,127,.55)" }}>{n}</div>
@@ -84,72 +115,38 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="reveal mt-8 text-[.9rem]" style={{ color: "rgba(243,235,221,.6)" }}>
+            Setup includes carrier sender registration, the paperwork that stops your texts landing in spam or getting blocked before they reach anyone. We handle it for you.
+          </p>
         </div>
       </section>
 
-      {/* WEBSITES & SEARCH */}
+      {/* THREE VERTICALS */}
       <section>
         <div className="wrap py-[84px]">
           <div className="sec-head reveal">
-            <span className="eyebrow">Websites &amp; search</span>
-            <h2>Everything you need to be found and chosen.</h2>
-            <p>Plain English, fixed quotes, no surprises. Pick what you need now and add the rest later.</p>
+            <span className="eyebrow">What we do</span>
+            <h2>Three ways we help Sydney small business.</h2>
+            <p>Pick what you need now. Everything is quoted up front, and none of it locks you in.</p>
           </div>
           <div className="cards">
-            {[
-              ["🌐", "A website that wins customers", "Custom-built, fast, and mobile-first. Designed to turn visitors into calls, bookings, and sales.", "Custom web design"],
-              ["📍", "Show up on Google", "Keyword research, your Google profile, reviews, and the technical setup so customers nearby find you first.", "Local SEO"],
-              ["🤖", "Show up in AI answers", "When someone asks ChatGPT or Google AI for a business like yours, we make sure your name comes up.", "AEO / GEO"],
-              ["🛒", "Sell online", "A full online store with secure card payments, a shopping cart, and stock management that you can update yourself.", "E-commerce, Stripe / PayPal"],
-              ["📅", "Take bookings automatically", "Let customers book and pay online, with reminders sent for them. Fewer no-shows, less admin.", "Online booking systems"],
-              ["💬", "Never miss a lead", "Missed-call text-back, instant replies, and a website chat assistant so an enquiry never goes cold.", "AI automation"],
-            ].map(([ico, h, p, tech]) => (
+            {verticals.map(({ icon: Icon, h, tag, p, href }) => (
               <div key={h} className="card reveal">
-                <div className="ico">{ico}</div>
-                <h3>{h}</h3><p>{p}</p><span className="tech">{tech}</span>
+                <div className="ico"><Icon size={22} color="var(--coral-2)" strokeWidth={1.75} /></div>
+                <h3>{h}</h3>
+                <span className="tech" style={{ display: "block", marginTop: 0, marginBottom: 10 }}>{tag}</span>
+                <p>{p}</p>
+                <Link href={href} className="inline-flex items-center gap-1 mt-4 text-[.9rem] font-semibold" style={{ color: "var(--coral-2)" }}>
+                  Learn more &rarr;
+                </Link>
               </div>
             ))}
-          </div>
-          <div className="reveal mt-10">
-            <Link href="/websites/" className="btn btn-ghost">More on websites &amp; search &rarr;</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* IT */}
-      <section style={{ background: "var(--paper)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
-        <div className="wrap py-[84px]">
-          <div className="sec-head reveal">
-            <span className="eyebrow">Behind the scenes</span>
-            <h2>The boring tech that keeps you running. Sorted.</h2>
-            <p>The same enterprise-grade IT that big companies pay a fortune for, priced and explained for a small business. You will always know what we did and why.</p>
-          </div>
-          <div className="cards">
-            {[
-              ["💻", "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched and protected, from one dashboard.", "Endpoint management / Intune"],
-              ["🛡️", "Protect against scams & ransomware", "Practical defences against the phishing and ransomware actually hitting Australian small businesses, aligned to the Essential Eight.", "Endpoint security"],
-              ["🌐", "Set up your office network", "Reliable Wi-Fi and wired networks, business internet, and tidy structured cabling. Done once and done right.", "Network & connectivity"],
-              ["💾", "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, so a crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
-              ["☁️", "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime.", "Cloud migration / M365"],
-              ["🗄️", "Move and modernise databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely.", "Database migration"],
-              ["📦", "Move or open an office", "Full IT relocation, planned and executed so you are running again the next morning.", "Office IT relocation"],
-              ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add years to a machine for a fraction of replacing it.", "Hardware upgrades"],
-              ["🔧", "On-site help when you need it", "A real person who comes to you across Greater Sydney for setups, office moves, and the things that just break.", "Ad-hoc & managed support"],
-            ].map(([ico, h, p, tech]) => (
-              <div key={h} className="card reveal">
-                <div className="ico">{ico}</div>
-                <h3>{h}</h3><p>{p}</p><span className="tech">{tech}</span>
-              </div>
-            ))}
-          </div>
-          <div className="reveal mt-10">
-            <Link href="/it-support/" className="btn btn-ghost">More on IT support &rarr;</Link>
           </div>
         </div>
       </section>
 
       {/* WHY */}
-      <section>
+      <section style={{ background: "var(--paper)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
         <div className="wrap py-[84px]">
           <div className="grid lg:grid-cols-[.9fr_1.1fr] gap-12 items-center">
             <div className="reveal">
@@ -158,14 +155,11 @@ export default function Home() {
               <p className="text-muted text-[1.08rem] mt-4">Big IT firms chase big contracts and treat small businesses as an afterthought. Coralstone does the opposite. You get the same engineer every time, plain answers, and prices that make sense.</p>
             </div>
             <div className="reveal grid">
-              {[
-                ["📞", "A real engineer answers", "No ticket queue, no offshore call centre. You talk to the person doing the work."],
-                ["🔓", "No lock-in contracts", "Stay because the work is good, not because you are trapped. Month to month, always."],
-                ["💰", "Pay when you are happy", "Start with a $400 deposit. The balance is due only once the work is done and you are satisfied."],
-                ["🗒️", "Fixed quotes, no jargon", "You get the scope and the price before anything starts, written in plain English."],
-              ].map(([k, h, p], i) => (
-                <div key={h} className={`flex gap-4 py-[18px] ${i < 3 ? "border-b" : ""}`} style={{ borderColor: "var(--line)" }}>
-                  <div className="flex-none w-[42px] h-[42px] rounded-[11px] grid place-items-center text-[1.15rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>{k}</div>
+              {why.map(({ icon: Icon, h, p }, i) => (
+                <div key={h} className={`flex gap-4 py-[18px] ${i < why.length - 1 ? "border-b" : ""}`} style={{ borderColor: "var(--line)" }}>
+                  <div className="flex-none w-[42px] h-[42px] rounded-[11px] grid place-items-center" style={{ background: "var(--ink)", color: "var(--sand)" }}>
+                    <Icon size={19} strokeWidth={1.75} />
+                  </div>
                   <div><h3 className="text-ink text-[1.1rem] mb-[3px]">{h}</h3><p className="text-muted text-[.93rem]">{p}</p></div>
                 </div>
               ))}
