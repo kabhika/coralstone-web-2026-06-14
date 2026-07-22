@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 export const metadata: Metadata = {
   title: "IT Support & Security for Sydney small business",
   description:
-    "On-site and remote IT support across Greater Sydney: computer setup and security, office networks, NAS backup, ransomware protection, cloud and database migration, Microsoft 365, hardware upgrades, office relocation, and automation. No lock-in.",
+    "On-site and remote IT support across Greater Sydney, covering computer setup and security, office networks, NAS backup, ransomware protection, cloud and database migration, Microsoft 365, hardware upgrades, office relocation, and automation. No lock-in.",
 };
 
 const services = [
@@ -15,8 +15,8 @@ const services = [
   ["💾", "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, kept separate from your cloud. A crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
   ["☁️", "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime, then set up the way it should have been the first time.", "Cloud migration / M365"],
   ["🗄️", "Move and modernise your databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely and with a clear rollback plan.", "Database migration"],
-  ["📦", "Move or open an office", "Full IT relocation: we plan, disconnect, move, and reconnect your whole setup so you are running again the next morning, not next week.", "Office IT relocation"],
-  ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add three or more years to a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
+  ["📦", "Move or open an office", "Full IT relocation. We plan, disconnect, move, and reconnect your whole setup so you are running again the next morning, not next week.", "Office IT relocation"],
+  ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add real life back into a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
   ["🤖", "Automate the busywork", "Connect the tools you already use so quotes, invoices, reminders, and follow-ups happen on their own. Practical automation, not buzzwords.", "AI & workflow automation"],
   ["🔧", "On-site & ongoing support", "A real person who comes to you across Greater Sydney for setups and the things that just break, plus optional proactive monthly care.", "Ad-hoc & managed support"],
 ];
@@ -27,7 +27,7 @@ export default function ITSupport() {
       <PageHero
         eyebrow="IT support & security"
         title="The boring tech that keeps you running. Sorted."
-        intro="The same enterprise-grade IT that big companies pay a fortune for, priced and explained for a small business. You will always know what we did and why."
+        intro="IT support is one of three ways we help Sydney small business, alongside AI automation and websites and SEO. Here, you get the same enterprise-grade IT that big companies pay a fortune for, priced and explained for a small business. You will always know what we did and why."
       />
 
       <section>

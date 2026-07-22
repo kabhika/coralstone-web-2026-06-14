@@ -3,7 +3,7 @@ import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Websites & Search (SEO, AEO, GEO) for Sydney small business",
+  title: "Websites and SEO for Sydney small business",
   description:
     "Custom websites for Sydney small businesses that get found on Google and AI search. Local SEO, Answer Engine Optimisation, online stores, booking systems, and lead capture.",
 };
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 const services = [
   ["🌐", "A website that wins customers", "Custom-built, fast, and mobile-first. No stock templates. Designed around how your customers actually decide, so visits turn into calls, bookings, and sales.", "Custom web design"],
   ["📍", "Show up on Google", "Keyword and competitor research, Google Business Profile, reviews, and the on-page technical work so nearby customers find you first.", "Local SEO"],
-  ["🤖", "Show up in AI answers", "When someone asks ChatGPT, Google AI, or Siri for a business like yours, your site is structured so the AI can read it and recommend you. Most local sites cannot be read by these tools at all.", "AEO / GEO"],
-  ["🛒", "Sell online", "A full store: secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
+  ["🤖", "Built for AI search", "When someone asks ChatGPT, Google AI, or Siri about a business like yours, we structure your site so these tools can read and understand it, the same way we structure it for Google. Most local sites are not built this way yet.", "AEO / GEO"],
+  ["🛒", "Sell online", "A full store, with secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
   ["📅", "Take bookings automatically", "Customers book and pay online, with reminders handled for you. Fewer no-shows, less phone tag.", "Online booking"],
   ["💬", "Never miss a lead", "Missed-call text-back, instant first replies, and a site chat assistant so an enquiry never goes cold while you are on the tools.", "AI automation"],
   ["✏️", "Update it yourself", "A simple editor so you can change text, swap photos, and add products without touching code or paying us for every tweak.", "Easy content management"],
@@ -23,9 +23,9 @@ export default function Websites() {
   return (
     <>
       <PageHero
-        eyebrow="Websites & search"
+        eyebrow="Websites and SEO"
         title="A website is the foot in the door. Being found is the point."
-        intro="We build the site, then do the unglamorous work that actually brings calls: getting you onto Google, into local search, and readable by the AI assistants more people now ask first."
+        intro="Websites and SEO is one of three ways we help Sydney small business, alongside AI automation and IT support. We build the site, then do the unglamorous work that actually brings calls, getting you onto Google, into local search, and readable by the AI assistants more people now ask first."
       />
 
       {/* 1-2-3 band */}
@@ -35,7 +35,7 @@ export default function Websites() {
             {[
               ["1", "Build", "Fast, mobile-first, written for your customers and ready to take enquiries from day one."],
               ["2", "Get on the map", "Google profile, local SEO, and reviews so you appear when people nearby are searching."],
-              ["3", "Stay found", "Answer Engine Optimisation so AI tools surface you, not just your competitors."],
+              ["3", "Stay found", "Answer Engine Optimisation, so your site is structured the way AI tools need to read it."],
             ].map(([n, h, p]) => (
               <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
                 <div className="font-display text-[3rem] font-semibold leading-[.8]" style={{ color: "rgba(232,168,139,.55)" }}>{n}</div>
