@@ -39,7 +39,7 @@ export default function Websites() {
               ["3", "Stay found", "Answer Engine Optimisation, so your site is structured the way AI tools need to read it."],
             ].map(([n, h, p]) => (
               <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
-                <div className="font-display text-[3rem] font-semibold leading-[.8]" style={{ color: "rgba(232,168,139,.55)" }}>{n}</div>
+                <div className="font-display text-[3rem] font-semibold leading-[.8]" style={{ color: "rgba(240,140,88,.92)" }}>{n}</div>
                 <h3 className="text-paper text-[1.25rem] mt-3 mb-2">{h}</h3>
                 <p className="text-[.95rem]" style={{ color: "rgba(243,235,221,.74)" }}>{p}</p>
               </div>
