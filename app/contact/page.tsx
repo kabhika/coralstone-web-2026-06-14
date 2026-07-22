@@ -64,7 +64,7 @@ export default function Contact() {
                 className="grid gap-4"
               >
                 {/* Web3Forms access key — replace YOUR_ACCESS_KEY_HERE with the key from web3forms.com */}
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                <input type="hidden" name="access_key" value="fc17a19e-8ea6-4497-85d6-bfce68b14626" />
                 {/* Redirect to branded thank-you page after submission */}
                 <input type="hidden" name="redirect" value="https://www.coralstonegroup.com.au/thank-you/" />
                 {/* Subject line in your inbox */}
