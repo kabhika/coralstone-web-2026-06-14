@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Coralstone Services Group",
   },
   description:
-    "Coralstone builds websites for Sydney small businesses that show up on Google and AI search, then quietly handles the IT behind the scenes. No lock-in. Free audit. $400 deposit to start.",
+    "Coralstone builds websites for Sydney small businesses that show up on Google and AI search, then quietly handles the IT behind the scenes. No lock-in. Free audit. $497 deposit to start.",
   openGraph: {
     title: "Coralstone Services Group",
     description:

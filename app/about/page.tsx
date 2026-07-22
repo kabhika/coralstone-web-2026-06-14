@@ -47,7 +47,7 @@ export default function About() {
               ["No lock-in", "You stay because the work is good. Month to month, always."],
               ["No jargon", "If we cannot explain it to you plainly, we have not understood it well enough ourselves."],
               ["Fixed quotes", "You see the scope and the price before anything starts. No creeping invoices."],
-              ["Pay when happy", "Websites start with a $400 deposit. The balance is due only when you are satisfied."],
+              ["Pay when happy", "Websites start with a $497 deposit. The balance is due only when you are satisfied."],
             ].map(([h, p]) => (
               <div key={h} className="card reveal">
                 <h3 className="text-ink text-[1.2rem] mb-2">{h}</h3>
