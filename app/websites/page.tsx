@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
+import { Globe, MapPin, Bot, ShoppingCart, Calendar, MessageCircle, Pencil, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Websites and SEO for Sydney small business",
@@ -9,15 +10,15 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  ["🌐", "A website that wins customers", "Custom-built, fast, and mobile-first. No stock templates. Designed around how your customers actually decide, so visits turn into calls, bookings, and sales.", "Custom web design"],
-  ["📍", "Show up on Google", "Keyword and competitor research, Google Business Profile, reviews, and the on-page technical work so nearby customers find you first.", "Local SEO"],
-  ["🤖", "Built for AI search", "When someone asks ChatGPT, Google AI, or Siri about a business like yours, we structure your site so these tools can read and understand it, the same way we structure it for Google. Most local sites are not built this way yet.", "AEO / GEO"],
-  ["🛒", "Sell online", "A full store, with secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
-  ["📅", "Take bookings automatically", "Customers book and pay online, with reminders handled for you. Fewer no-shows, less phone tag.", "Online booking"],
-  ["💬", "Never miss a lead", "Missed-call text-back, instant first replies, and a site chat assistant so an enquiry never goes cold while you are on the tools.", "AI automation"],
-  ["✏️", "Update it yourself", "A simple editor so you can change text, swap photos, and add products without touching code or paying us for every tweak.", "Easy content management"],
-  ["📱", "Fast on every device", "Built mobile-first and tuned for speed. Google ranks fast, mobile-friendly sites higher, and so do impatient customers.", "Responsive & performance"],
-];
+  [Globe, "A website that wins customers", "Custom-built, fast, and mobile-first. No stock templates. Designed around how your customers actually decide, so visits turn into calls, bookings, and sales.", "Custom web design"],
+  [MapPin, "Show up on Google", "Keyword and competitor research, Google Business Profile, reviews, and the on-page technical work so nearby customers find you first.", "Local SEO"],
+  [Bot, "Built for AI search", "When someone asks ChatGPT, Google AI, or Siri about a business like yours, we structure your site so these tools can read and understand it, the same way we structure it for Google. Most local sites are not built this way yet.", "AEO / GEO"],
+  [ShoppingCart, "Sell online", "A full store, with secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
+  [Calendar, "Take bookings automatically", "Customers book and pay online, with reminders handled for you. Fewer no-shows, less phone tag.", "Online booking"],
+  [MessageCircle, "Never miss a lead", "Missed-call text-back, instant first replies, and a site chat assistant so an enquiry never goes cold while you are on the tools.", "AI automation"],
+  [Pencil, "Update it yourself", "A simple editor so you can change text, swap photos, and add products without touching code or paying us for every tweak.", "Easy content management"],
+  [Smartphone, "Fast on every device", "Built mobile-first and tuned for speed. Google ranks fast, mobile-friendly sites higher, and so do impatient customers.", "Responsive & performance"],
+] as const;
 
 export default function Websites() {
   return (
@@ -55,9 +56,9 @@ export default function Websites() {
             <p>Start with what you need now. Add the rest when it earns its place.</p>
           </div>
           <div className="cards">
-            {services.map(([ico, h, p, tech]) => (
+            {services.map(([Icon, h, p, tech]) => (
               <div key={h} className="card reveal">
-                <div className="ico">{ico}</div>
+                <div className="ico"><Icon size={22} color="var(--coral-2)" strokeWidth={1.75} /></div>
                 <h3>{h}</h3><p>{p}</p><span className="tech">{tech}</span>
               </div>
             ))}

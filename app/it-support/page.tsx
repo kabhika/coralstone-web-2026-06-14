@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
+import { Laptop, ShieldCheck, Network, HardDrive, Cloud, Database, Package, Zap, Bot, Wrench } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "IT Support & Security for Sydney small business",
@@ -9,17 +10,17 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  ["💻", "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched, encrypted, and protected from one dashboard. Staff start their first day ready to work.", "Endpoint management / Intune / EUC"],
-  ["🛡️", "Protect against scams & ransomware", "Practical defences against the phishing and ransomware actually hitting Australian small businesses, aligned to the government's Essential Eight guidance.", "Endpoint security"],
-  ["🌐", "Set up your office network", "Reliable Wi-Fi and wired networks, business internet, and tidy structured cabling. The plumbing that everything else depends on, done once and done right.", "Network & connectivity"],
-  ["💾", "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, kept separate from your cloud. A crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
-  ["☁️", "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime, then set up the way it should have been the first time.", "Cloud migration / M365"],
-  ["🗄️", "Move and modernise your databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely and with a clear rollback plan.", "Database migration"],
-  ["📦", "Move or open an office", "Full IT relocation. We plan, disconnect, move, and reconnect your whole setup so you are running again the next morning, not next week.", "Office IT relocation"],
-  ["⚡", "Make slow computers fast again", "A simple RAM and storage upgrade can add real life back into a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
-  ["🤖", "Automate the busywork", "Connect the tools you already use so quotes, invoices, reminders, and follow-ups happen on their own. Practical automation, not buzzwords.", "AI & workflow automation"],
-  ["🔧", "On-site & ongoing support", "A real person who comes to you across Greater Sydney for setups and the things that just break, plus optional proactive monthly care.", "Ad-hoc & managed support"],
-];
+  [Laptop, "Set up and secure your computers", "New laptops configured properly, old ones cleaned up, every machine kept patched, encrypted, and protected from one dashboard. Staff start their first day ready to work.", "Endpoint management / Intune / EUC"],
+  [ShieldCheck, "Protect against scams & ransomware", "Practical defences against the phishing and ransomware actually hitting Australian small businesses, aligned to the government's Essential Eight guidance.", "Endpoint security"],
+  [Network, "Set up your office network", "Reliable Wi-Fi and wired networks, business internet, and tidy structured cabling. The plumbing that everything else depends on, done once and done right.", "Network & connectivity"],
+  [HardDrive, "Back up everything, on-site", "A local backup box plus the 3-2-1 rule, kept separate from your cloud. A crash, theft, or ransomware never means losing your files.", "NAS backup, Synology"],
+  [Cloud, "Move to the cloud", "Email, files, and accounts moved to Microsoft 365 or Google with no lost data and no downtime, then set up the way it should have been the first time.", "Cloud migration / M365"],
+  [Database, "Move and modernise your databases", "Shift ageing on-premise servers and databases to a modern, supported setup, safely and with a clear rollback plan.", "Database migration"],
+  [Package, "Move or open an office", "Full IT relocation. We plan, disconnect, move, and reconnect your whole setup so you are running again the next morning, not next week.", "Office IT relocation"],
+  [Zap, "Make slow computers fast again", "A simple RAM and storage upgrade can add real life back into a machine for a fraction of replacing it. We assess, source, and fit.", "Hardware upgrades"],
+  [Bot, "Automate the busywork", "Connect the tools you already use so quotes, invoices, reminders, and follow-ups happen on their own. Practical automation, not buzzwords.", "AI & workflow automation"],
+  [Wrench, "On-site & ongoing support", "A real person who comes to you across Greater Sydney for setups and the things that just break, plus optional proactive monthly care.", "Ad-hoc & managed support"],
+] as const;
 
 export default function ITSupport() {
   return (
@@ -33,9 +34,9 @@ export default function ITSupport() {
       <section>
         <div className="wrap py-[64px]">
           <div className="cards">
-            {services.map(([ico, h, p, tech]) => (
+            {services.map(([Icon, h, p, tech]) => (
               <div key={h} className="card reveal">
-                <div className="ico">{ico}</div>
+                <div className="ico"><Icon size={22} color="var(--coral-2)" strokeWidth={1.75} /></div>
                 <h3>{h}</h3><p>{p}</p><span className="tech">{tech}</span>
               </div>
             ))}

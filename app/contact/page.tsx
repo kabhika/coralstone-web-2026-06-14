@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -37,14 +38,16 @@ export default function Contact() {
             {/* details */}
             <div className="reveal">
               <div className="grid gap-5">
-                {[
-                  ["📍", "Sydney, New South Wales, Australia"],
-                  ["📞", "+61 467 604 791"],
-                  ["📧", "hello@coralstonegroup.com.au"],
-                  ["🕐", "Mon–Fri, 8am–6pm AEST"],
-                ].map(([ico, v]) => (
+                {([
+                  [MapPin, "Sydney, New South Wales, Australia"],
+                  [Phone, "+61 467 604 791"],
+                  [Mail, "hello@coralstonegroup.com.au"],
+                  [Clock, "Mon–Fri, 8am–6pm AEST"],
+                ] as const).map(([Icon, v]) => (
                   <div key={v} className="flex items-center gap-4">
-                    <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center text-[1.2rem]" style={{ background: "var(--sand-2)" }}>{ico}</span>
+                    <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                      <Icon size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                    </span>
                     <span className="text-[1.02rem] text-charcoal">{v}</span>
                   </div>
                 ))}

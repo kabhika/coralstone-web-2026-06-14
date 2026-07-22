@@ -7,7 +7,7 @@ import CTA from "@/components/CTA";
 export const metadata: Metadata = {
   title: "AI Automation for Sydney small business",
   description:
-    "Missed-Call Rescue, speed-to-lead, appointment reminders, review automation, customer reactivation, and Stella the AI receptionist. Installed on your existing number and tools by a local engineer. No lock-in.",
+    "Missed-Call Rescue, Speed-to-Lead, appointment reminders, review automation, and Stella the AI receptionist for Sydney small business. Free audit, no lock-in.",
 };
 
 const automations = [

@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="py-10 border-t text-[.88rem] text-muted" style={{ borderColor: "var(--line)" }}>
       <div className="wrap flex flex-wrap items-center justify-between gap-4">
-        <div>&copy; 2025 Coralstone Services Group &middot; Sydney, NSW, Australia</div>
+        <div>&copy; {new Date().getFullYear()} Coralstone Services Group &middot; Sydney, NSW, Australia</div>
         <div className="flex gap-5">
           <Link href="/ai-automation/" className="hover:text-ink">AI Automation</Link>
           <Link href="/it-support/" className="hover:text-ink">IT Support</Link>

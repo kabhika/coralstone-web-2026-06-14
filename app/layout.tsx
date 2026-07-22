@@ -18,20 +18,26 @@ const body = Hanken_Grotesk({
   display: "swap",
 });
 
+const description =
+  "AI automation, IT support, and websites found on Google and AI search, so Sydney small business never misses a lead. Free audit, $497 to start, no lock-in.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.coralstonegroup.com.au"),
   title: {
-    default: "Coralstone Services Group | Sydney small business IT & web",
+    default: "Coralstone Services Group | Sydney AI Automation, IT & Websites",
     template: "%s | Coralstone Services Group",
   },
-  description:
-    "Coralstone builds websites for Sydney small businesses that show up on Google and AI search, then quietly handles the IT behind the scenes. No lock-in. Free audit. $497 deposit to start.",
+  description,
   openGraph: {
-    title: "Coralstone Services Group",
-    description:
-      "Websites that get Sydney small businesses found on Google and AI search, plus the IT support behind the scenes.",
+    title: "Coralstone Services Group | Never miss a lead",
+    description,
     type: "website",
     locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Coralstone Services Group | Never miss a lead",
+    description,
   },
 };
 
