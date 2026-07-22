@@ -11,7 +11,7 @@ export default function CTA({
     <section className="text-center" style={{ background: "var(--ink)", color: "var(--sand)" }} id="contact">
       <div className="wrap py-20">
         <div className="reveal">
-          <span className="eyebrow" style={{ color: "#E9A07F" }}>{eyebrow}</span>
+          <span className="eyebrow" style={{ color: "#E8A88B" }}>{eyebrow}</span>
           <h2 className="text-paper mt-3" style={{ fontSize: "clamp(2rem,4.5vw,3rem)" }}>{title}</h2>
           <p className="mx-auto mt-[18px] mb-[30px] text-[1.1rem]" style={{ color: "rgba(243,235,221,.75)", maxWidth: "48ch" }}>{body}</p>
           <a className="btn btn-primary text-[1.05rem] px-[30px] py-[15px]" href="https://calendly.com/abhishek-sinha-coralstonegroup/30min">

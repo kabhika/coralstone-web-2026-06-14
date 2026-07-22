@@ -47,7 +47,7 @@ export default function ITSupport() {
       <section style={{ background: "var(--ink)", color: "var(--sand)" }}>
         <div className="wrap py-[80px]">
           <div className="sec-head reveal" style={{ maxWidth: 660 }}>
-            <span className="eyebrow" style={{ color: "#E9A07F" }}>How support works</span>
+            <span className="eyebrow" style={{ color: "#E8A88B" }}>How support works</span>
             <h2 className="text-paper">Two ways to work with us. Both no lock-in.</h2>
             <p style={{ color: "rgba(243,235,221,.72)" }}>Pick the one that fits where you are. Move between them whenever you like.</p>
           </div>

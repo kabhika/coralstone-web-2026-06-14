@@ -72,7 +72,7 @@ function Tier({ children, pop }: { children: React.ReactNode; pop?: boolean }) {
       className="reveal bg-paper rounded-[18px] p-[30px] flex flex-col relative"
       style={{
         border: pop ? "2px solid var(--coral)" : "1px solid var(--line)",
-        boxShadow: pop ? "0 24px 50px -30px rgba(217,87,46,.7)" : "var(--shadow)",
+        boxShadow: pop ? "0 24px 50px -30px rgba(216,105,55,.7)" : "var(--shadow)",
       }}
     >
       {children}

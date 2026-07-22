@@ -4,8 +4,8 @@
 
 :root{
   --sand:#F3EBDD; --sand-2:#EBE0CD; --sand-3:#E2D4BC;
-  --ink:#173A28; --ink-2:#21503a;
-  --coral:#D9572E; --coral-2:#C24420;
+  --ink:#122052; --ink-2:#1C3664;
+  --coral:#D86937; --coral-2:#C15629;
   --charcoal:#2A2722; --muted:#6B6357;
   --paper:#FBF7EF;
   --line:rgba(42,39,34,.14);
@@ -23,8 +23,8 @@ body{
 body::before{
   content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
   background:
-    radial-gradient(1200px 600px at 78% -8%, rgba(217,87,46,.10), transparent 60%),
-    radial-gradient(900px 700px at -10% 30%, rgba(23,58,40,.08), transparent 55%);
+    radial-gradient(1200px 600px at 78% -8%, rgba(216,105,55,.10), transparent 60%),
+    radial-gradient(900px 700px at -10% 30%, rgba(18,32,82,.08), transparent 55%);
 }
 body::after{
   content:"";position:fixed;inset:0;z-index:-1;opacity:.045;pointer-events:none;
@@ -42,14 +42,14 @@ body::after{
   .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;
     padding:12px 22px;border-radius:999px;cursor:pointer;border:none;
     transition:transform .18s ease,box-shadow .2s,background .2s}
-  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 22px -10px rgba(217,87,46,.8)}
+  .btn-primary{background:var(--coral);color:#fff;box-shadow:0 8px 22px -10px rgba(216,105,55,.8)}
   .btn-primary:hover{background:var(--coral-2);transform:translateY(-2px)}
   .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink);padding:11px 21px}
   .btn-ghost:hover{background:var(--ink);color:var(--sand);transform:translateY(-2px)}
 
   .tag{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:var(--paper);
     padding:7px 15px;border-radius:999px;font-size:.82rem;font-weight:600;color:var(--ink);box-shadow:var(--shadow)}
-  .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(217,87,46,.18)}
+  .tag .dot{width:8px;height:8px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 4px rgba(216,105,55,.18)}
 
   .sec-head{max-width:660px;margin-bottom:44px}
   .sec-head h2{font-size:clamp(2rem,4.2vw,2.9rem);color:var(--ink);margin-top:14px}

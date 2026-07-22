@@ -95,7 +95,7 @@ export default function Home() {
       <section id="how-it-works" style={{ background: "var(--ink)", color: "var(--sand)" }}>
         <div className="wrap py-[84px]">
           <div className="sec-head reveal">
-            <span className="eyebrow" style={{ color: "#E9A07F" }}>How it works</span>
+            <span className="eyebrow" style={{ color: "#E8A88B" }}>How it works</span>
             <h2 className="text-paper">Three steps. Your phone number stays the same.</h2>
             <p style={{ color: "rgba(243,235,221,.72)" }}>
               Missed-Call Rescue runs quietly in the background on the number you already advertise. Nothing to reprint, nothing new to learn.
@@ -108,10 +108,10 @@ export default function Home() {
               ["3", "You get the report", "Every rescued call is logged. You receive a simple report each month showing what came in and what it was worth.", "Monthly report"],
             ].map(([n, h, p, pill]) => (
               <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
-                <div className="font-display text-[3.4rem] font-semibold leading-[.8]" style={{ color: "rgba(233,160,127,.55)" }}>{n}</div>
+                <div className="font-display text-[3.4rem] font-semibold leading-[.8]" style={{ color: "rgba(232,168,139,.55)" }}>{n}</div>
                 <h3 className="text-paper text-[1.32rem] mt-[14px] mb-[10px]">{h}</h3>
                 <p className="text-[.96rem]" style={{ color: "rgba(243,235,221,.74)" }}>{p}</p>
-                <span className="inline-block mt-[14px] text-[.72rem] uppercase tracking-wide font-semibold border rounded-full px-[10px] py-[4px]" style={{ color: "#E9A07F", borderColor: "rgba(233,160,127,.4)" }}>{pill}</span>
+                <span className="inline-block mt-[14px] text-[.72rem] uppercase tracking-wide font-semibold border rounded-full px-[10px] py-[4px]" style={{ color: "#E8A88B", borderColor: "rgba(232,168,139,.4)" }}>{pill}</span>
               </div>
             ))}
           </div>

@@ -91,7 +91,7 @@ export default function Contact() {
         .fld{width:100%;background:var(--sand);border:1px solid var(--line);border-radius:12px;
           padding:13px 15px;font-size:.96rem;color:var(--charcoal);font-family:inherit;outline:none;
           transition:border-color .15s, box-shadow .15s}
-        .fld:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(217,87,46,.15)}
+        .fld:focus{border-color:var(--coral);box-shadow:0 0 0 3px rgba(216,105,55,.15)}
         .fld::placeholder{color:var(--muted)}
       `}</style>
     </>
