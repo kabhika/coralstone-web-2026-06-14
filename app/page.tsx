@@ -73,7 +73,7 @@ export default function Home() {
 
             <div className="reveal flex justify-center">
               <div className="bg-paper border rounded-[24px] p-[30px] w-full max-w-[360px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
-                <Image src="/logo.png" alt="Coralstone" width={130} height={82} className="w-[130px] mx-auto mb-[18px]" />
+                <Image src="/CoralStoneLogoNew.svg" alt="Coralstone" width={130} height={82} className="w-[130px] mx-auto mb-[18px]" />
                 {[
                   ["Instant text back", "Sent within seconds of a missed call"],
                   ["Works on your number", "Call forwarding, nothing new to give out"],
