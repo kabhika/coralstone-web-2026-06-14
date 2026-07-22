@@ -16,7 +16,7 @@ export default function Header() {
       <div className="wrap">
         <nav className="flex items-center justify-between h-[72px]">
           <Link href="/" className="flex items-center">
-            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={89} height={56} className="h-[56px] w-auto" priority />
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-12 md:h-16 w-auto" priority />
           </Link>
           <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
             {links.map((l) => (
