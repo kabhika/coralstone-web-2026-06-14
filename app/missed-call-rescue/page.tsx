@@ -147,7 +147,7 @@ export default function MissedCallRescue() {
           </div>
           <div className="reveal grid gap-3 max-w-[720px]">
             {faqs.map((f) => (
-              <details key={f.q} className="bg-paper border rounded-[14px] px-5 py-4" style={{ borderColor: "var(--line)" }}>
+              <details key={f.q} className="bg-paper border rounded-[18px] px-5 py-4" style={{ borderColor: "var(--line)" }}>
                 <summary className="cursor-pointer font-semibold text-ink text-[1.02rem]">{f.q}</summary>
                 <p className="text-muted text-[.94rem] mt-3">{f.a}</p>
               </details>

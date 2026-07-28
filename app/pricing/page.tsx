@@ -195,7 +195,7 @@ export default function Pricing() {
             {it.map((t) => (
               <Tier key={t.name} pop={t.pop}>
                 {t.pop && <span className="absolute -top-3 right-[22px] text-[.72rem] font-bold uppercase tracking-wide px-3 py-[5px] rounded-full" style={{ background: "var(--coral)", color: "#fff" }}>Most popular</span>}
-                <div className="text-[.74rem] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--coral-2)" }}>{t.tag}</div>
+                <div className="text-[.74rem] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--coral-3)" }}>{t.tag}</div>
                 <h3 className="text-ink text-[1.25rem]">{t.name}</h3>
                 <p className="text-muted text-[.9rem] mt-2 mb-[18px] min-h-[42px]">{t.desc}</p>
                 <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>

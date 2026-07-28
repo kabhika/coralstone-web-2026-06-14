@@ -45,7 +45,7 @@ export default function Home() {
               <span className="tag reveal"><span className="dot" /> Missed-Call Rescue &middot; Greater Sydney</span>
               <h1 className="reveal text-ink mt-6" style={{ fontSize: "clamp(2.7rem,6vw,4.4rem)" }}>
                 A missed call does not wait.<br />
-                <span className="italic font-medium" style={{ color: "var(--coral)" }}>It just calls the next name on Google.</span>
+                <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>It just calls the next name on Google.</span>
               </h1>
               <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[38ch]">
                 Most callers who reach your voicemail do not leave a message. Missed-Call Rescue sends every missed caller a text within seconds, so you are still in the running while you finish the job in front of you. A local engineer installs it on your existing number and takes care of it from there.
@@ -56,7 +56,7 @@ export default function Home() {
               </div>
               <p className="reveal mt-4 text-[.86rem] text-muted">No lock-in. A local engineer sets it up, not a call centre reading a script.</p>
 
-              <div className="reveal grid grid-cols-2 sm:grid-cols-4 mt-[46px] pt-6 border-t" style={{ borderColor: "var(--line)" }}>
+              <dl className="reveal grid grid-cols-2 sm:grid-cols-4 mt-[46px] pt-6 border-t" style={{ borderColor: "var(--line)" }}>
                 {[
                   ["Free", "No-obligation audit"],
                   ["$497", "To get started"],
@@ -64,27 +64,29 @@ export default function Home() {
                   ["Local", "On-site, Greater Sydney"],
                 ].map(([n, l], i) => (
                   <div key={l} className={i > 0 ? "sm:border-l sm:pl-[22px] pr-[18px]" : "pr-[18px]"} style={{ borderColor: "var(--line)" }}>
-                    <div className="font-display text-[1.5rem] font-semibold text-ink leading-none">{n}</div>
-                    <div className="text-[.74rem] uppercase tracking-wider text-muted mt-[7px] font-semibold">{l}</div>
+                    <dt className="font-display text-[1.5rem] font-semibold text-ink leading-none">{n}</dt>
+                    <dd className="text-[.74rem] uppercase tracking-wider text-muted mt-[7px] font-semibold">{l}</dd>
                   </div>
                 ))}
-              </div>
+              </dl>
             </div>
 
             <div className="reveal flex justify-center">
               <div className="bg-paper border rounded-[24px] p-[30px] w-full max-w-[360px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
                 <Image src="/CoralStoneLogoNew.svg" alt="Coralstone" width={260} height={164} className="w-[260px] mx-auto mb-[24px]" />
-                {[
-                  ["Instant text back", "Sent within seconds of a missed call"],
-                  ["Works on your number", "Call forwarding, nothing new to give out"],
-                  ["Set up by a real engineer", "Registered, tested, and monitored"],
-                  ["Every rescue logged", "One simple report, sent monthly"],
-                ].map(([b, s], i) => (
-                  <div key={b} className={`flex items-center gap-3 py-[13px] ${i > 0 ? "border-t border-dashed" : ""}`} style={{ borderColor: "var(--line)" }}>
-                    <span className="flex-none w-6 h-6 rounded-full grid place-items-center text-[.8rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>&#10003;</span>
-                    <div><b className="font-semibold text-charcoal text-[.95rem]">{b}</b><span className="block text-[.8rem] text-muted">{s}</span></div>
-                  </div>
-                ))}
+                <ul className="list-none">
+                  {[
+                    ["Instant text back", "Sent within seconds of a missed call"],
+                    ["Works on your number", "Call forwarding, nothing new to give out"],
+                    ["Set up by a real engineer", "Registered, tested, and monitored"],
+                    ["Every rescue logged", "One simple report, sent monthly"],
+                  ].map(([b, s], i) => (
+                    <li key={b} className={`flex items-center gap-3 py-[13px] ${i > 0 ? "border-t border-dashed" : ""}`} style={{ borderColor: "var(--line)" }}>
+                      <span aria-hidden="true" className="flex-none w-6 h-6 rounded-full grid place-items-center text-[.8rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>&#10003;</span>
+                      <div><b className="font-semibold text-charcoal text-[.95rem]">{b}</b><span className="block text-[.8rem] text-muted">{s}</span></div>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
@@ -136,7 +138,7 @@ export default function Home() {
                 <h3>{h}</h3>
                 <span className="tech" style={{ display: "block", marginTop: 0, marginBottom: 10 }}>{tag}</span>
                 <p>{p}</p>
-                <Link href={href} className="inline-flex items-center gap-1 mt-4 text-[.9rem] font-semibold" style={{ color: "var(--coral-2)" }}>
+                <Link href={href} className="inline-flex items-center gap-1 mt-4 text-[.9rem] font-semibold" style={{ color: "var(--coral-3)" }}>
                   Learn more &rarr;
                 </Link>
               </div>

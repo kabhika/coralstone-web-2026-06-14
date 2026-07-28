@@ -63,7 +63,7 @@ export default function Contact() {
                 method="POST"
                 className="grid gap-4"
               >
-                {/* Web3Forms access key — replace YOUR_ACCESS_KEY_HERE with the key from web3forms.com */}
+                {/* Web3Forms access key */}
                 <input type="hidden" name="access_key" value="168e60d7-87a0-4efc-9738-d907f9388a20" />
                 {/* Redirect to branded thank-you page after submission */}
                 <input type="hidden" name="redirect" value="https://www.coralstonegroup.com.au/thank-you/" />
@@ -73,16 +73,34 @@ export default function Contact() {
                 <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
 
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <input name="first_name" required placeholder="First name" className="fld" />
-                  <input name="last_name" placeholder="Last name" className="fld" />
+                  <div>
+                    <label htmlFor="first_name" className="sr-only">First name</label>
+                    <input id="first_name" name="first_name" required placeholder="First name" className="fld" />
+                  </div>
+                  <div>
+                    <label htmlFor="last_name" className="sr-only">Last name</label>
+                    <input id="last_name" name="last_name" placeholder="Last name" className="fld" />
+                  </div>
                 </div>
-                <input type="email" name="email" required placeholder="Your email" className="fld" />
-                <input name="company" placeholder="Company name" className="fld" />
-                <select name="service" required defaultValue="" className="fld">
-                  <option value="" disabled>What do you need help with?</option>
-                  {services.map((s) => <option key={s} value={s}>{s}</option>)}
-                </select>
-                <textarea name="message" rows={4} placeholder="Tell us more" className="fld" />
+                <div>
+                  <label htmlFor="email" className="sr-only">Your email</label>
+                  <input id="email" type="email" name="email" required placeholder="Your email" className="fld" />
+                </div>
+                <div>
+                  <label htmlFor="company" className="sr-only">Company name</label>
+                  <input id="company" name="company" placeholder="Company name" className="fld" />
+                </div>
+                <div>
+                  <label htmlFor="service" className="sr-only">What do you need help with?</label>
+                  <select id="service" name="service" required defaultValue="" className="fld">
+                    <option value="" disabled>What do you need help with?</option>
+                    {services.map((s) => <option key={s} value={s}>{s}</option>)}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="message" className="sr-only">Tell us more</label>
+                  <textarea id="message" name="message" rows={4} placeholder="Tell us more" className="fld" />
+                </div>
                 <button type="submit" className="btn btn-primary justify-center">Send message &rarr;</button>
               </form>
             </div>
