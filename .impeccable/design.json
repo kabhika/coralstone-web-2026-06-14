@@ -50,14 +50,6 @@
       "css": ".ds-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; } .ds-input { width: 100%; background: #F3EBDD; border: 1px solid rgba(42,39,34,.14); border-radius: 12px; padding: 13px 15px; font-size: .96rem; color: #2A2722; outline: none; transition: border-color .15s, box-shadow .15s; } .ds-input::placeholder { color: #6B6357; } .ds-input:focus { border-color: #D86937; box-shadow: 0 0 0 3px rgba(216,105,55,.15); }"
     },
     {
-      "name": "Glass Card",
-      "kind": "card",
-      "refersTo": "card",
-      "description": "Scoped exception: the four AI Automation pricing tiers on /pricing only. Translucent + blurred, sits over the Glass Atmosphere gradient wash. Not used on any other card in the system.",
-      "html": "<div class=\"ds-glass-wrap\"><div class=\"ds-card-glass\"><h3 style=\"font-family: Fraunces, Georgia, serif; color: #122052; margin: 0 0 8px;\">Front Desk</h3><p style=\"color: #6B6357; font-size: .88rem; margin: 0;\">Everything in Rescue, plus Speed-to-Lead and the Review Engine.</p></div></div>",
-      "css": ".ds-glass-wrap { position: relative; padding: 40px; background: #F3EBDD; } .ds-glass-wrap::before { content: ''; position: absolute; inset: 0; background: radial-gradient(900px 480px at 82% 0%, rgba(216,105,55,.14), transparent 60%), radial-gradient(760px 520px at 8% 100%, rgba(18,32,82,.12), transparent 55%); } .ds-card-glass { position: relative; background: rgba(251,247,239,.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(42,39,34,.14); border-radius: 18px; padding: 30px; box-shadow: 0 1px 2px rgba(42,39,34,.06), 0 18px 40px -24px rgba(42,39,34,.35); }"
-    },
-    {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",

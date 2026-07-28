@@ -103,10 +103,10 @@ const it = [
   },
 ];
 
-function Tier({ children, pop, glass }: { children: React.ReactNode; pop?: boolean; glass?: boolean }) {
+function Tier({ children, pop }: { children: React.ReactNode; pop?: boolean }) {
   return (
     <div
-      className={`reveal rounded-[18px] p-[30px] flex flex-col h-full relative ${glass ? "card-glass" : "bg-paper"}`}
+      className="reveal bg-paper rounded-[18px] p-[30px] flex flex-col h-full relative"
       style={{
         border: pop ? "2px solid var(--coral)" : "1px solid var(--line)",
         boxShadow: pop ? "0 24px 50px -30px rgba(216,105,55,.7)" : "var(--shadow)",
@@ -127,7 +127,7 @@ export default function Pricing() {
       />
 
       {/* AI AUTOMATION */}
-      <section className="glass-atmosphere">
+      <section>
         <div className="wrap py-[64px]">
           <div className="sec-head reveal" style={{ maxWidth: 680 }}>
             <span className="eyebrow">AI automation</span>
@@ -136,7 +136,7 @@ export default function Pricing() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
             {ai.map((t) => (
-              <Tier key={t.name} glass>
+              <Tier key={t.name}>
                 <h3 className="text-ink text-[1.15rem] min-h-[38px]">{t.name}</h3>
                 <p className="text-muted text-[.88rem] mt-2 mb-[16px]">{t.desc}</p>
                 <div className="mt-auto">
