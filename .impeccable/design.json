@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-28T00:00:00Z",
+  "title": "Design System: Coralstone Services Group",
+  "extensions": {
+    "colorMeta": {
+      "trust-navy": { "role": "primary", "displayName": "Trust Navy", "canonical": "#122052", "tonalRamp": ["#060D22", "#0B1638", "#122052", "#1C3664", "#2E4A82", "#5470A8", "#8FA4C8", "#C7D2E5"] },
+      "navy-deep": { "role": "primary", "displayName": "Navy Deep", "canonical": "#1C3664", "tonalRamp": ["#080E1A", "#0F1C30", "#1C3664", "#2C4E86", "#4368A6", "#6D8AC0", "#9DB2D6", "#D0DAEA"] },
+      "signal-terracotta": { "role": "secondary", "displayName": "Signal Terracotta", "canonical": "#D86937", "tonalRamp": ["#4A2410", "#7A3A18", "#A84D22", "#C15629", "#D86937", "#E68F5F", "#F0B592", "#F8DAC8"] },
+      "terracotta-deep": { "role": "secondary", "displayName": "Terracotta Deep", "canonical": "#C15629", "tonalRamp": ["#3E1D0C", "#642F16", "#8E401E", "#C15629", "#D67A4C", "#E39C77", "#EEBFA4", "#F8E1D2"] },
+      "terracotta-ink": { "role": "secondary", "displayName": "Terracotta Ink", "canonical": "#A44923", "tonalRamp": ["#301508", "#4E220D", "#7B3617", "#A44923", "#BE6C41", "#D69672", "#E9BEA4", "#F6E1D4"] },
+      "warm-sand": { "role": "neutral", "displayName": "Warm Sand", "canonical": "#F3EBDD", "tonalRamp": ["#6B5A3E", "#9A8664", "#C7B48F", "#E2D4BC", "#EBE0CD", "#F3EBDD", "#F8F2E8", "#FDFAF5"] },
+      "deep-sand": { "role": "neutral", "displayName": "Deep Sand", "canonical": "#EBE0CD", "tonalRamp": ["#5C4C33", "#8A7752", "#B6A279", "#D3C2A0", "#EBE0CD", "#F1E8DA", "#F7F0E7", "#FBF7F0"] },
+      "dark-sand": { "role": "neutral", "displayName": "Dark Sand", "canonical": "#E2D4BC", "tonalRamp": ["#524329", "#7F6C46", "#A6906A", "#C4B18C", "#E2D4BC", "#EAE0CE", "#F1EADD", "#F8F3EC"] },
+      "charcoal-ink": { "role": "neutral", "displayName": "Charcoal Ink", "canonical": "#2A2722", "tonalRamp": ["#0F0E0C", "#1A1815", "#2A2722", "#423D35", "#5C554A", "#7A7267", "#9C948A", "#C4BEB6"] },
+      "muted-stone": { "role": "neutral", "displayName": "Muted Stone", "canonical": "#6B6357", "tonalRamp": ["#2E2A24", "#453F37", "#5A544A", "#6B6357", "#857D6E", "#A29889", "#C0B7A8", "#DED7CB"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#FBF7EF", "tonalRamp": ["#C9BFA9", "#DCD3C1", "#EAE3D5", "#F3EDE3", "#FBF7EF", "#FCF9F3", "#FDFBF7", "#FFFFFF"] },
+      "soft-terracotta-tint": { "role": "tertiary", "displayName": "Soft Terracotta Tint", "canonical": "#E8A88B", "tonalRamp": ["#4A2A1D", "#7A4630", "#A66444", "#C4855F", "#E8A88B", "#EEC0AA", "#F4D8C9", "#FAECE3"] },
+      "terracotta-ember": { "role": "tertiary", "displayName": "Terracotta Ember", "canonical": "#F08C58", "tonalRamp": ["#4E2B12", "#7E451D", "#AC5F29", "#D07A3C", "#F08C58", "#F5AD82", "#FACCAF", "#FCE8DB"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Page hero h1 only, largest headline on any page." },
+      "headline": { "displayName": "Headline", "purpose": "Section heading (h2) and the dark CTA band heading." },
+      "numeral": { "displayName": "Numeral", "purpose": "Large standalone digits that aren't headings: prices, stats, step numbers." },
+      "title": { "displayName": "Title", "purpose": "Card, pricing-tier, and subsection heading (h3)." },
+      "body": { "displayName": "Body", "purpose": "Paragraph and UI copy, denser in cards/forms, roomier in intros." },
+      "caption": { "displayName": "Caption", "purpose": "Fine print, list-item text, card meta, pricing notes." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrow tag above hero and section headings." }
+    },
+    "shadows": [
+      { "name": "ambient-resting", "value": "0 1px 2px rgba(42,39,34,.06), 0 18px 40px -24px rgba(42,39,34,.35)", "purpose": "Default state for cards and tags." },
+      { "name": "ambient-hover", "value": "0 1px 2px rgba(42,39,34,.06), 0 26px 50px -28px rgba(42,39,34,.5)", "purpose": "Card hover, paired with a 4px upward translate." },
+      { "name": "cta-shadow", "value": "0 8px 22px -10px rgba(216,105,55,.8)", "purpose": "Primary button resting shadow, tinted terracotta." }
+    ],
+    "motion": [
+      { "name": "reveal-transition", "value": "opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1)", "purpose": "Scroll-triggered fade-and-rise for sections entering view; disabled under prefers-reduced-motion." },
+      { "name": "hover-lift", "value": "transform .18s ease, box-shadow .2s, background .2s", "purpose": "Gentle 2-4px hover lift on buttons and cards." }
+    ],
+    "breakpoints": [
+      { "name": "card-grid-collapse", "value": "860px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field with a visually hidden label; placeholder states purpose, label persists it for assistive tech.",
+      "html": "<label for=\"ds-demo-email\" class=\"ds-sr-only\">Your email</label><input id=\"ds-demo-email\" type=\"email\" placeholder=\"Your email\" class=\"ds-input\">",
+      "css": ".ds-sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; } .ds-input { width: 100%; background: #F3EBDD; border: 1px solid rgba(42,39,34,.14); border-radius: 12px; padding: 13px 15px; font-size: .96rem; color: #2A2722; outline: none; transition: border-color .15s, box-shadow .15s; } .ds-input::placeholder { color: #6B6357; } .ds-input:focus { border-color: #D86937; box-shadow: 0 0 0 3px rgba(216,105,55,.15); }"
+    },
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main CTA action, e.g. \"Book a free chat\".",
+      "html": "<button class=\"ds-btn-primary\">Book a free chat</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .95rem; padding: 12px 22px; border-radius: 999px; cursor: pointer; border: none; background: #D86937; color: #ffffff; box-shadow: 0 8px 22px -10px rgba(216,105,55,.8); transition: transform .18s ease, box-shadow .2s, background .2s; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: #C15629; transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #122052; outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action beside a primary CTA.",
+      "html": "<button class=\"ds-btn-ghost\">Learn more</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .95rem; padding: 11px 21px; border-radius: 999px; cursor: pointer; background: transparent; color: #122052; border: 1.5px solid #122052; transition: transform .18s ease, background .2s, color .2s; } .ds-btn-ghost:hover, .ds-btn-ghost:focus-visible { background: #122052; color: #F3EBDD; transform: translateY(-2px); } .ds-btn-ghost:focus-visible { outline: 2px solid #D86937; outline-offset: 2px; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Small pill label, e.g. brand claims like \"No lock-in, ever\".",
+      "html": "<span class=\"ds-tag\"><span class=\"ds-tag-dot\"></span>No lock-in, ever</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(42,39,34,.14); background: #FBF7EF; padding: 7px 15px; border-radius: 999px; font-size: .82rem; font-weight: 600; color: #122052; box-shadow: 0 1px 2px rgba(42,39,34,.06), 0 18px 40px -24px rgba(42,39,34,.35); } .ds-tag-dot { width: 8px; height: 8px; border-radius: 50%; background: #D86937; box-shadow: 0 0 0 4px rgba(216,105,55,.18); }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Service/feature card with icon, title, body, and technical tag.",
+      "html": "<div class=\"ds-card\"><div class=\"ds-card-icon\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C15629\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M13 2 3 14h9l-1 8 10-12h-9l1-8z\"/></svg></div><h3 class=\"ds-card-title\">AI Automation</h3><p class=\"ds-card-body\">Never miss a lead again, even after hours.</p><span class=\"ds-card-tech\">Missed-Call Rescue</span></div>",
+      "css": ".ds-card { background: #FBF7EF; border: 1px solid rgba(42,39,34,.14); border-radius: 18px; padding: 26px; box-shadow: 0 1px 2px rgba(42,39,34,.06), 0 18px 40px -24px rgba(42,39,34,.35); transition: transform .2s, box-shadow .25s; } .ds-card:hover { transform: translateY(-4px); box-shadow: 0 1px 2px rgba(42,39,34,.06), 0 26px 50px -28px rgba(42,39,34,.5); } .ds-card-icon { width: 46px; height: 46px; border-radius: 13px; display: grid; place-items: center; margin-bottom: 16px; background: #EBE0CD; } .ds-card-title { font-family: Fraunces, Georgia, serif; font-size: 1.18rem; font-weight: 600; color: #122052; margin-bottom: 8px; } .ds-card-body { font-size: .94rem; color: #6B6357; } .ds-card-tech { display: block; margin-top: 12px; font-size: .74rem; letter-spacing: .04em; text-transform: uppercase; color: #C15629; font-weight: 600; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky header with logo, links, and a primary CTA.",
+      "html": "<header class=\"ds-nav\"><div class=\"ds-nav-inner\"><span class=\"ds-nav-logo\">Coralstone</span><nav class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link\">AI Automation</a><a href=\"#\" class=\"ds-nav-link\">IT Support</a><a href=\"#\" class=\"ds-nav-link\">Pricing</a></nav><a href=\"#\" class=\"ds-nav-cta\">Book a free chat</a></div></header>",
+      "css": ".ds-nav { position: sticky; top: 0; z-index: 50; background: rgba(243,235,221,.82); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42,39,34,.14); } .ds-nav-inner { max-width: 1120px; margin-inline: auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px; } .ds-nav-logo { font-family: Fraunces, Georgia, serif; font-weight: 600; color: #122052; font-size: 1.1rem; } .ds-nav-links { display: flex; gap: 30px; font-weight: 500; font-size: 1.02rem; } .ds-nav-link { color: rgba(42,39,34,.8); text-decoration: none; transition: color .2s; } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: #122052; } .ds-nav-cta { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: .95rem; padding: 12px 22px; border-radius: 999px; background: #D86937; color: #fff; text-decoration: none; box-shadow: 0 8px 22px -10px rgba(216,105,55,.8); transition: transform .18s ease, background .2s; } .ds-nav-cta:hover, .ds-nav-cta:focus-visible { background: #C15629; transform: translateY(-2px); }"
+    },
+    {
+      "name": "Phone Mockup",
+      "kind": "custom",
+      "refersTo": "phone-mockup",
+      "description": "Signature component: hand-built phone frame showing a missed call followed by a rescue SMS. Static resting-state snapshot; the live component animates the two messages in on scroll.",
+      "html": "<div class=\"ds-phone\"><div class=\"ds-phone-screen\"><div class=\"ds-phone-notch\"></div><div class=\"ds-phone-clock\">9:41</div><div class=\"ds-phone-messages\"><div class=\"ds-phone-missed\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#E8A88B\" stroke-width=\"1.75\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 2 22 8M22 2l-6 6\"/><path d=\"M2 6.5c0 8 6.5 15.5 15.5 15.5.9 0 1.8-.1 2.6-.3a1.7 1.7 0 0 0 1-2.5l-2-3.4a1.7 1.7 0 0 0-1.9-.8l-2.3.6a1.7 1.7 0 0 1-1.7-.4l-3-3a1.7 1.7 0 0 1-.4-1.7l.6-2.3a1.7 1.7 0 0 0-.8-1.9L4.8 4.9a1.7 1.7 0 0 0-2.5 1c-.2.8-.3 1.7-.3 2.6z\"/></svg><div><div class=\"ds-phone-missed-title\">Missed Call</div><div class=\"ds-phone-missed-sub\">0412 345 678 &middot; now</div></div></div><div class=\"ds-phone-bubble\">Hi, sorry we missed your call. This is Dave's Plumbing, flat out on a job right now. Reply here or we will call you back within the hour.</div></div></div></div>",
+      "css": ".ds-phone { position: relative; margin-inline: auto; width: 270px; height: 540px; border-radius: 38px; padding: 8px; background: #2A2722; box-shadow: 0 1px 2px rgba(42,39,34,.06), 0 18px 40px -24px rgba(42,39,34,.35); } .ds-phone-screen { position: relative; width: 100%; height: 100%; border-radius: 30px; overflow: hidden; display: flex; flex-direction: column; background: linear-gradient(180deg, #122052, #1C3664); } .ds-phone-notch { position: absolute; left: 50%; transform: translateX(-50%); top: 10px; width: 86px; height: 16px; border-radius: 999px; background: rgba(0,0,0,.35); } .ds-phone-clock { padding-top: 36px; text-align: center; font-size: .7rem; font-weight: 600; letter-spacing: .02em; color: rgba(243,235,221,.45); } .ds-phone-messages { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; padding: 20px; } .ds-phone-missed { border-radius: 16px; padding: 12px; display: flex; align-items: flex-start; gap: 12px; background: rgba(243,235,221,.1); border: 1px solid rgba(243,235,221,.18); } .ds-phone-missed-title { font-size: .8rem; font-weight: 600; color: #FBF7EF; } .ds-phone-missed-sub { font-size: .74rem; color: rgba(243,235,221,.6); } .ds-phone-bubble { align-self: flex-start; max-width: 86%; border-radius: 16px 16px 16px 4px; padding: 12px; font-size: .8rem; line-height: 1.4; color: #ffffff; background: #D86937; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quiet Foreman",
+    "overview": "Coralstone reads like the person who actually turns up: grounded, competent, unshowy. Warm sand and paper backgrounds with a faint grain give the site the feel of a well-kept trade office, not a SaaS product demo. Trust Navy carries authority in headlines and the dark CTA band; Signal Terracotta is used sparingly, like a stamp of confidence, on buttons, tags, and the eyebrow label. Fraunces serif headlines with tight negative tracking sit above generous, unhurried Hanken Grotesk body copy, so the site never feels rushed or salesy.\n\nThe system explicitly rejects the dark-mode gradient AI-agency look: no glassmorphism, no neon accents, no cold greyscale UI chrome. Depth stays warm and diffuse rather than sharp or glassy. Motion is limited to a gentle fade-and-rise on scroll and a small hover lift; nothing loops, nothing auto-plays, everything respects prefers-reduced-motion.",
+    "keyCharacteristics": [
+      "Warm paper/sand palette with a subtle grain texture, never stark white or dark-mode",
+      "Trust Navy for authority, Signal Terracotta as the single warm accent, used sparingly",
+      "Fraunces display serif for all headings, Hanken Grotesk for all body copy, never mixed",
+      "Fully pill-shaped interactive controls (999px), one card radius (18px) for containers",
+      "Soft ambient dual-layer shadow at rest, deepening only on hover",
+      "Scroll-triggered fade-and-rise reveals and gentle hover lift; nothing else moves"
+    ],
+    "rules": [
+      { "name": "The Terracotta Restraint Rule", "body": "Signal Terracotta never fills a large surface. It appears only as button fills, a small dot, or the SMS bubble accent, always against sand, paper, or navy. Its rarity is what makes it read as confidence rather than noise.", "section": "colors" },
+      { "name": "The Small-Text Ink Rule", "body": "Any terracotta text under large-text size on a light (sand/paper) background uses Terracotta Ink, never Signal Terracotta or Terracotta Deep, so it clears 4.5:1. Terracotta Deep is reserved for large-text accents and icons; Signal Terracotta is reserved for fills.", "section": "colors" },
+      { "name": "The Serif Authority Rule", "body": "Fraunces is reserved for h1/h2/h3 only. Body copy, labels, and UI text always render in Hanken Grotesk; the two families never mix within the same text block.", "section": "typography" },
+      { "name": "The Ambient-Not-Glassy Rule", "body": "Shadows are always warm-toned and diffuse. No hard-edged drop shadows, no colorless grey shadows, no glassmorphism or backdrop-blur used to fake elevation (blur is reserved for the sticky header only, for legibility, not depth).", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every clickable control fully pill-shaped (999px) and every static container at the single 18px card radius.",
+      "Do apply the ambient dual-layer shadow to cards and tags at rest, deepening (never changing character) on hover.",
+      "Do treat Signal Terracotta as the one warm accent: buttons, the tag dot, eyebrow labels, and small highlights only.",
+      "Do use lucide-react icons only, one stroke weight (1.75), colored Terracotta Deep or Trust Navy on a sand/paper/navy background.",
+      "Do respect prefers-reduced-motion: reveals must render fully visible with no transition when it is set."
+    ],
+    "donts": [
+      "Don't introduce a dark-mode gradient, glassmorphism, or neon-accent look anywhere on the site; that is the explicit anti-reference for this brand.",
+      "Don't mix Fraunces into body copy or Hanken Grotesk into headings.",
+      "Don't add a radius between the pill (999px) and the card radius (18px); no rounded-md-style in-between values.",
+      "Don't use emoji as icons, or icons from any library other than lucide-react.",
+      "Don't add looping, parallax, or auto-playing motion; scroll-triggered fade-and-rise and hover lift are the only motion vocabulary."
+    ]
+  }
+}
