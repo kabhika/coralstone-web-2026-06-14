@@ -176,7 +176,7 @@ Depth is soft and warm, never sharp or glassy: a single ambient shadow token com
 - **CTA shadow** (`0 8px 22px -10px rgba(216,105,55,.8)`): Primary button resting shadow, tinted terracotta instead of charcoal.
 
 ### Named Rules
-**The Ambient-Not-Glassy Rule.** Shadows are always warm-toned and diffuse. No hard-edged drop shadows, no colorless grey shadows, no glassmorphism or backdrop-blur used to fake elevation (blur is reserved for the sticky header only, for legibility, not depth).
+**The Ambient-Not-Glassy Rule.** Shadows are always warm-toned and diffuse. No hard-edged drop shadows, no colorless grey shadows, no glassmorphism or backdrop-blur used to fake elevation, with one deliberate, scoped exception: the AI Automation pricing cards on `/pricing` (see Glass Card under Components). That exception does not license glassmorphism anywhere else; every other card, tag, and container stays flat-with-ambient-shadow as described above.
 
 ## Shapes
 
@@ -203,6 +203,16 @@ Every interactive control reads as a soft, tactile, confident object: warm fills
 - **Shadow Strategy:** Ambient resting shadow, deepening plus a 4px lift on hover (see Elevation & Depth).
 - **Border:** 1px hairline.
 - **Internal Padding:** 26px, with a 46px icon chip (Deep Sand background, 13px radius) above the title.
+
+### Glass Card (scoped exception)
+- **Where:** The four AI Automation pricing tiers on `/pricing` only (Missed-Call Rescue, Front Desk, Customer Reactivation, Stella). Not used elsewhere; the Websites and IT Support tiers stay on the standard flat Paper White card.
+- **Background:** `rgba(251,247,239,.55)` (Paper White at 55% opacity) with `backdrop-filter: blur(16px)`. Falls back to a near-opaque `rgba(251,247,239,.92)` via `@supports` for browsers without backdrop-filter, so text never sits on a half-transparent surface with nothing to blur.
+- **Context:** Only ever placed over the new Glass Atmosphere wash (below), never over plain Warm Sand alone — the blur needs something soft behind it to be worth doing.
+- **Shape and shadow:** Same 18px radius and ambient shadow as a standard card; the exception is background and blur only, not shape or elevation language.
+- **Why it exists:** A deliberate, requested departure for this one section, not a system-wide shift. Treat any request to extend it to other cards as a new decision, not an inherited default.
+
+### Glass Atmosphere (section background)
+A soft dual radial-gradient wash (terracotta at 82%/0%, navy at 8%/100%, both under 15% opacity, fading to transparent) sits behind the AI Automation pricing section so the Glass Card variant has something to blur. Same visual language as the sitewide body atmosphere gradient (see `body::before` in globals.css), scoped to one section via `.glass-atmosphere` instead of applied globally.
 
 ### Inputs / Fields
 - **Style:** Warm Sand background, 1px hairline border, 12px radius, Charcoal Ink text, Muted Stone placeholder.
