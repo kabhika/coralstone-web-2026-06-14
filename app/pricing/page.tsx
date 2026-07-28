@@ -106,7 +106,7 @@ const it = [
 function Tier({ children, pop }: { children: React.ReactNode; pop?: boolean }) {
   return (
     <div
-      className="reveal bg-paper rounded-[18px] p-[30px] flex flex-col relative"
+      className="reveal bg-paper rounded-[18px] p-[30px] flex flex-col h-full relative"
       style={{
         border: pop ? "2px solid var(--coral)" : "1px solid var(--line)",
         boxShadow: pop ? "0 24px 50px -30px rgba(216,105,55,.7)" : "var(--shadow)",
@@ -138,16 +138,18 @@ export default function Pricing() {
             {ai.map((t) => (
               <Tier key={t.name}>
                 <h3 className="text-ink text-[1.15rem]">{t.name}</h3>
-                <p className="text-muted text-[.88rem] mt-2 mb-[16px] min-h-[95px]">{t.desc}</p>
-                <div className="font-display text-[1.9rem] font-semibold text-charcoal leading-none">
-                  {t.price} <small className="text-[.78rem] font-sans text-muted font-medium">{t.priceNote}</small>
-                </div>
-                {t.price2 && (
-                  <div className="font-display text-[1.4rem] font-semibold text-charcoal leading-none mt-1">
-                    {t.price2} <small className="text-[.78rem] font-sans text-muted font-medium">{t.price2Note}</small>
+                <p className="text-muted text-[.88rem] mt-2 mb-[16px]">{t.desc}</p>
+                <div className="mt-auto">
+                  <div className="font-display text-[1.9rem] font-semibold text-charcoal leading-none">
+                    {t.price} <small className="text-[.78rem] font-sans text-muted font-medium">{t.priceNote}</small>
                   </div>
-                )}
-                <Link href={t.href} className="btn btn-ghost mt-auto justify-center w-full">{t.cta}</Link>
+                  {t.price2 && (
+                    <div className="font-display text-[1.4rem] font-semibold text-charcoal leading-none mt-1">
+                      {t.price2} <small className="text-[.78rem] font-sans text-muted font-medium">{t.price2Note}</small>
+                    </div>
+                  )}
+                  <Link href={t.href} className="btn btn-ghost justify-center w-full mt-4">{t.cta}</Link>
+                </div>
               </Tier>
             ))}
           </div>
@@ -167,15 +169,17 @@ export default function Pricing() {
               <Tier key={t.name} pop={t.pop}>
                 {t.pop && <span className="absolute -top-3 right-[22px] text-[.72rem] font-bold uppercase tracking-wide px-3 py-[5px] rounded-full" style={{ background: "var(--coral)", color: "#fff" }}>Most popular</span>}
                 <h3 className="text-ink text-[1.25rem]">{t.name}</h3>
-                <p className="text-muted text-[.9rem] mt-2 mb-[18px] min-h-[42px]">{t.desc}</p>
-                <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
-                <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price} <small className="text-[.85rem] font-sans text-muted font-medium">+ GST</small></div>
-                <ul className="list-none my-5 grid gap-[10px]">
-                  {t.items.map((i) => (
-                    <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
-                  ))}
-                </ul>
-                <Link href="/contact/" className={`btn ${t.pop ? "btn-primary" : "btn-ghost"} mt-auto justify-center`}>Get a quote</Link>
+                <p className="text-muted text-[.9rem] mt-2 mb-[18px]">{t.desc}</p>
+                <div className="mt-auto">
+                  <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
+                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price} <small className="text-[.85rem] font-sans text-muted font-medium">+ GST</small></div>
+                  <ul className="list-none my-5 grid gap-[10px]">
+                    {t.items.map((i) => (
+                      <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
+                    ))}
+                  </ul>
+                  <Link href="/contact/" className={`btn ${t.pop ? "btn-primary" : "btn-ghost"} justify-center`}>Get a quote</Link>
+                </div>
               </Tier>
             ))}
           </div>
@@ -197,16 +201,18 @@ export default function Pricing() {
                 {t.pop && <span className="absolute -top-3 right-[22px] text-[.72rem] font-bold uppercase tracking-wide px-3 py-[5px] rounded-full" style={{ background: "var(--coral)", color: "#fff" }}>Most popular</span>}
                 <div className="text-[.74rem] uppercase tracking-wider font-semibold mb-1" style={{ color: "var(--coral-3)" }}>{t.tag}</div>
                 <h3 className="text-ink text-[1.25rem]">{t.name}</h3>
-                <p className="text-muted text-[.9rem] mt-2 mb-[18px] min-h-[42px]">{t.desc}</p>
-                <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
-                <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price}<small className="text-[.95rem] font-sans text-muted font-medium">{t.unit} + GST</small></div>
-                <div className="text-[.8rem] text-muted mt-1">{t.note}</div>
-                <ul className="list-none my-5 grid gap-[10px]">
-                  {t.items.map((i) => (
-                    <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
-                  ))}
-                </ul>
-                <Link href="/contact/" className={`btn ${t.pop ? "btn-primary" : "btn-ghost"} mt-auto justify-center`}>Get a quote</Link>
+                <p className="text-muted text-[.9rem] mt-2 mb-[18px]">{t.desc}</p>
+                <div className="mt-auto">
+                  <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
+                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price}<small className="text-[.95rem] font-sans text-muted font-medium">{t.unit} + GST</small></div>
+                  <div className="text-[.8rem] text-muted mt-1">{t.note}</div>
+                  <ul className="list-none my-5 grid gap-[10px]">
+                    {t.items.map((i) => (
+                      <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
+                    ))}
+                  </ul>
+                  <Link href="/contact/" className={`btn ${t.pop ? "btn-primary" : "btn-ghost"} justify-center`}>Get a quote</Link>
+                </div>
               </Tier>
             ))}
           </div>
