@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CALL_STELLA_TEXT, PHONE_TEL } from "@/lib/contact";
 
 export default function Footer() {
   return (
@@ -12,7 +13,12 @@ export default function Footer() {
           <Link href="/pricing/" className="hover:text-ink">Pricing</Link>
           <Link href="/contact/" className="hover:text-ink">Contact</Link>
         </div>
-        <div>hello@coralstonegroup.com.au &middot; +61 467 604 791</div>
+        <div>
+          hello@coralstonegroup.com.au &middot; +61 467 604 791 &middot;{" "}
+          <a href={`tel:${PHONE_TEL}`} aria-label={CALL_STELLA_TEXT} className="hover:text-ink">
+            {CALL_STELLA_TEXT}
+          </a>
+        </div>
       </div>
     </footer>
   );

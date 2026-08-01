@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Zap, ShieldCheck, Search, Phone, Unlock, Wallet, FileText } from "lucide-react";
 import CTA from "@/components/CTA";
+import { CALL_STELLA_TEXT, PHONE_TEL } from "@/lib/contact";
 
 const verticals = [
   {
@@ -47,6 +48,28 @@ export default function Home() {
                 A missed call does not wait.<br />
                 <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>It just calls the next name on Google.</span>
               </h1>
+
+              <a
+                href={`tel:${PHONE_TEL}`}
+                aria-label={CALL_STELLA_TEXT}
+                className="reveal mt-7 inline-flex items-center gap-3 rounded-full pl-[6px] pr-6 py-[6px] border transition hover:-translate-y-0.5"
+                style={{
+                  background: "rgba(255,255,255,.4)",
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                  borderColor: "rgba(255,255,255,.6)",
+                  boxShadow: "var(--shadow)",
+                }}
+              >
+                <span
+                  className="flex-none w-11 h-11 rounded-full grid place-items-center"
+                  style={{ background: "var(--coral)", color: "#fff" }}
+                >
+                  <Phone size={18} strokeWidth={2} />
+                </span>
+                <span className="text-[1.15rem] font-semibold text-ink">{CALL_STELLA_TEXT}</span>
+              </a>
+
               <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[38ch]">
                 Most callers who reach your voicemail do not leave a message. Missed-Call Rescue sends every missed caller a text within seconds, so you are still in the running while you finish the job in front of you. A local engineer installs it on your existing number and takes care of it from there.
               </p>

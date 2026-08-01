@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
+import { CALL_STELLA_TEXT, PHONE_TEL } from "@/lib/contact";
 
 const links = [
   { href: "/ai-automation/", label: "AI Automation" },
@@ -47,17 +48,30 @@ export default function Header() {
     >
       <div className="wrap">
         <nav className="flex items-center justify-between py-3 md:py-5">
-          <Link href="/" className="flex items-center">
-            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-24 md:h-40 w-auto" priority />
+          <Link href="/" className="flex items-center flex-none">
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-16 md:h-24 w-auto" priority />
           </Link>
-          <div className="hidden md:flex gap-[30px] font-medium text-[1.02rem]">
-            {links.map((l) => (
-              <Link key={l.href} href={l.href} className="text-charcoal/80 hover:text-ink transition">
-                {l.label}
-              </Link>
-            ))}
+          <div className="hidden md:flex items-center gap-8">
+            <div className="flex gap-[30px] font-medium text-[1.02rem]">
+              {links.map((l) => (
+                <Link key={l.href} href={l.href} className="text-charcoal/80 hover:text-ink transition">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+            <a
+              href={`tel:${PHONE_TEL}`}
+              aria-label={CALL_STELLA_TEXT}
+              className="inline-flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 text-[.92rem] font-semibold text-ink transition whitespace-nowrap shrink-0 border"
+              style={{ borderColor: "var(--line)", background: "var(--paper)" }}
+            >
+              <span className="flex-none w-6 h-6 rounded-full grid place-items-center" style={{ background: "var(--coral)", color: "#fff" }}>
+                <Phone size={12} strokeWidth={2} />
+              </span>
+              1300 404 523
+            </a>
+            <Link href="/contact/" className="btn btn-primary shrink-0">Book a free chat</Link>
           </div>
-          <Link href="/contact/" className="hidden md:inline-flex btn btn-primary">Book a free chat</Link>
           <button
             type="button"
             className="icon-btn-ghost md:hidden flex-none w-11 h-11 grid place-items-center rounded-full"
@@ -87,6 +101,15 @@ export default function Header() {
               <Link href="/contact/" className="btn btn-primary justify-center mb-3">
                 Book a free chat
               </Link>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                aria-label={CALL_STELLA_TEXT}
+                className="flex items-center gap-1.5 py-3 text-[.95rem] font-medium text-charcoal border-b"
+                style={{ borderColor: "var(--line)" }}
+              >
+                <Phone size={15} strokeWidth={1.75} />
+                {CALL_STELLA_TEXT}
+              </a>
               {links.map((l) => (
                 <Link
                   key={l.href}
