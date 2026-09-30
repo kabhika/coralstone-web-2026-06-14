@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
 import { Globe, MapPin, Bot, ShoppingCart, Calendar, MessageCircle, Pencil, Smartphone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Websites and SEO for Sydney small business",
+  title: "Websites with Online Booking for Sydney small business",
   description:
-    "Custom websites for Sydney small businesses that get found on Google and AI search. Local SEO, Answer Engine Optimisation, online stores, booking systems, and lead capture.",
+    "Custom websites with online booking on our own platform, built to get Sydney trades and small businesses found on Google and AI search. Local SEO, online stores, and lead capture.",
 };
 
 const services = [
@@ -14,7 +15,7 @@ const services = [
   [MapPin, "Show up on Google", "Keyword and competitor research, Google Business Profile, reviews, and the on-page technical work so nearby customers find you first.", "Local SEO"],
   [Bot, "Built for AI search", "When someone asks ChatGPT, Google AI, or Siri about a business like yours, we structure your site so these tools can read and understand it, the same way we structure it for Google. Most local sites are not built this way yet.", "AEO / GEO"],
   [ShoppingCart, "Sell online", "A full store, with secure card payments, cart and checkout, customer accounts, and stock you can manage yourself.", "E-commerce, Stripe / PayPal"],
-  [Calendar, "Take bookings automatically", "Customers book and pay online, with reminders handled for you. Fewer no-shows, less phone tag.", "Online booking"],
+  [Calendar, "Take bookings automatically", "Customers book online, on your own site, on our own booking platform. No third-party branding, no per-seat fees, and every booking lands in your calendar and your reports. Built for trades: drop-off slots, service menus, vehicle details.", "Online booking, our own platform"],
   [MessageCircle, "Never miss a lead", "Missed-call text-back, instant first replies, and a site chat assistant so an enquiry never goes cold while you are on the tools.", "AI automation"],
   [Pencil, "Update it yourself", "A simple editor so you can change text, swap photos, and add products without touching code or paying us for every tweak.", "Easy content management"],
   [Smartphone, "Fast on every device", "Built mobile-first and tuned for speed. Google ranks fast, mobile-friendly sites higher, and so do impatient customers.", "Responsive & performance"],
@@ -24,9 +25,9 @@ export default function Websites() {
   return (
     <>
       <PageHero
-        eyebrow="Websites and SEO"
+        eyebrow="Websites"
         title="A website is the foot in the door. Being found is the point."
-        intro="Websites and SEO is one of three ways we help Sydney small business, alongside AI automation and IT support. We build the site, then do the unglamorous work that actually brings calls, getting you onto Google, into local search, and readable by the AI assistants more people now ask first."
+        intro="A fast, custom website with online booking built in, then the unglamorous work that actually brings calls: Google, local search, and the AI assistants more people now ask first. One engineer builds it, owns it, and answers for it."
       />
 
       {/* 1-2-3 band */}
@@ -78,6 +79,20 @@ export default function Websites() {
             <p className="text-muted text-[1.06rem] mt-4">
               We structure your content, headings, and business details so both Google and these AI tools can understand exactly what you do, where, and for whom. It is the same idea as SEO, pointed at the place search is heading.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PROOF BAND */}
+      <section>
+        <div className="wrap pb-[76px]">
+          <div className="reveal rounded-[18px] border p-6 flex flex-wrap items-center justify-between gap-4" style={{ background: "var(--sand-2)", borderColor: "var(--line)" }}>
+            <p className="text-muted text-[.98rem] m-0">
+              <b className="text-ink">Recent builds:</b> Switch Gear Automotive, Derive Driving School, Peel Manor House.
+            </p>
+            <Link href="/our-work/" className="inline-flex items-center gap-1 text-[.9rem] font-semibold whitespace-nowrap" style={{ color: "var(--coral-3)" }}>
+              See our work &rarr;
+            </Link>
           </div>
         </div>
       </section>

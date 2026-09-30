@@ -26,12 +26,30 @@ export default function About() {
             <p>
               Coralstone exists to flip that. The same engineering standards used inside large Australian organisations, the way computers are secured and managed, the way data is backed up, the way migrations are run, applied to businesses that have never had access to it.
             </p>
-            <p>
-              Behind Coralstone is a Modern Workplace and End User Compute engineer (Microsoft certified, MS-102 and MD-102) who has spent years managing fleets of devices and security for larger organisations. The website and search side grew out of the same instinct: small businesses were paying too much to be found online, and getting too little. So that became part of the offer too.
-            </p>
+            <div className="reveal grid sm:grid-cols-[200px_1fr] gap-6 items-start mt-2">
+              <img
+                src="/abhishek.jpg"
+                alt="Abhishek Sinha, founder and engineer at Coralstone Services Group"
+                width={200}
+                height={299}
+                className="w-full h-auto rounded-[18px] border"
+                style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}
+              />
+              <p>
+                Behind Coralstone is Abhishek Sinha, a Modern Workplace and End User Compute engineer (Microsoft certified, MS-102 and MD-102) who has spent more than twenty years managing devices and security for larger organisations, and now applies the same standards to businesses that never had access to them. The website and search side grew out of the same instinct: small businesses were paying too much to be found online, and getting too little. So that became part of the offer too.
+              </p>
+            </div>
             <p className="text-charcoal font-medium">
               The promise is simple: talk to the person doing the work, get plain answers, pay a fair fixed price, and never get locked in.
             </p>
+            <div className="reveal mt-8 bg-paper border rounded-[18px] p-6 not-prose" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
+              <p className="m-0 text-[.95rem] text-charcoal leading-[1.9]">
+                <b className="text-ink">Coralstone Services Group Pty Ltd</b><br />
+                ACN 690 335 034 &middot; ABN 13 080 859 721<br />
+                Box Hill NSW 2765, Australia<br />
+                Mon-Fri 8am-6pm AEST
+              </p>
+            </div>
           </div>
         </div>
       </section>

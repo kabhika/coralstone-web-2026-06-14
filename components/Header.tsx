@@ -6,14 +6,15 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { Menu, Phone, X } from "lucide-react";
-import { CALL_STELLA_TEXT, PHONE_TEL } from "@/lib/contact";
+import { PHONE_ABHI_DISPLAY, PHONE_ABHI_TEL, PHONE_ABHI_TEXT } from "@/lib/contact";
 
 const links = [
-  { href: "/ai-automation/", label: "AI Automation" },
+  { href: "/websites/", label: "Websites" },
+  { href: "/get-found/", label: "Get Found" },
+  { href: "/our-work/", label: "Our Work" },
+  { href: "/automation/", label: "Automation" },
   { href: "/it-support/", label: "IT Support" },
-  { href: "/websites/", label: "Websites and SEO" },
   { href: "/pricing/", label: "Pricing" },
-  { href: "/about/", label: "About" },
 ];
 
 export default function Header() {
@@ -60,15 +61,15 @@ export default function Header() {
               ))}
             </div>
             <a
-              href={`tel:${PHONE_TEL}`}
-              aria-label={CALL_STELLA_TEXT}
+              href={`tel:${PHONE_ABHI_TEL}`}
+              aria-label={PHONE_ABHI_TEXT}
               className="inline-flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 text-[.92rem] font-semibold text-ink transition whitespace-nowrap shrink-0 border"
               style={{ borderColor: "var(--line)", background: "var(--paper)" }}
             >
               <span className="flex-none w-6 h-6 rounded-full grid place-items-center" style={{ background: "var(--coral)", color: "#fff" }}>
                 <Phone size={12} strokeWidth={2} />
               </span>
-              1300 404 523
+              {PHONE_ABHI_DISPLAY}
             </a>
             <Link href="/contact/" className="btn btn-primary shrink-0">Book a free chat</Link>
           </div>
@@ -102,13 +103,13 @@ export default function Header() {
                 Book a free chat
               </Link>
               <a
-                href={`tel:${PHONE_TEL}`}
-                aria-label={CALL_STELLA_TEXT}
+                href={`tel:${PHONE_ABHI_TEL}`}
+                aria-label={PHONE_ABHI_TEXT}
                 className="flex items-center gap-1.5 py-3 text-[.95rem] font-medium text-charcoal border-b"
                 style={{ borderColor: "var(--line)" }}
               >
                 <Phone size={15} strokeWidth={1.75} />
-                {CALL_STELLA_TEXT}
+                {PHONE_ABHI_TEXT}
               </a>
               {links.map((l) => (
                 <Link

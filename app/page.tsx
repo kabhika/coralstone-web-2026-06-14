@@ -1,37 +1,39 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Zap, ShieldCheck, Search, Phone, Unlock, Wallet, FileText } from "lucide-react";
+import { Globe, Search, Zap, Wrench, Phone, Unlock, Wallet, FileText } from "lucide-react";
 import CTA from "@/components/CTA";
-import { CALL_STELLA_TEXT, PHONE_TEL } from "@/lib/contact";
+import CaseStudyStrip from "@/components/CaseStudyStrip";
 
-const verticals = [
+const services = [
   {
-    icon: Zap,
-    h: "AI Automation",
-    tag: "Never lose another lead",
-    p: "Missed-Call Rescue, instant replies, and quote follow-ups connect the tools you already use, so an enquiry never goes cold while you are on a job.",
-    href: "/ai-automation/",
-  },
-  {
-    icon: ShieldCheck,
-    h: "IT Support",
-    tag: "The boring tech that keeps you running, sorted",
-    p: "Backups, security, networks, and computers, managed by one local engineer who answers the phone himself. No ticket queue, no call centre.",
-    href: "/it-support/",
+    icon: Globe,
+    h: "A website that wins work",
+    tag: "Websites + booking",
+    p: "Custom-built, fast, and mobile-first, written for your customers. Online booking built in, on our own platform, so the site works while you are on the tools.",
+    href: "/websites/",
   },
   {
     icon: Search,
-    h: "Websites and SEO",
-    tag: "Get found on Google and AI search",
-    p: "A fast, custom website built and structured so customers, and the AI assistants they ask, find you first. We assess this in your free audit.",
-    href: "/websites/",
+    h: "Get found on Google",
+    tag: "SEO / AEO / GEO",
+    p: "Local search, your Google profile, reviews, and the structured work that puts you in front of people searching nearby, and in the answers AI assistants give.",
+    href: "/get-found/",
+  },
+  {
+    icon: Zap,
+    h: "Never miss a job",
+    tag: "Automation",
+    p: "Every missed caller texted back in seconds. An AI receptionist who answers, books, and never puts anyone on hold. Installed and looked after by a local engineer.",
+    href: "/automation/",
   },
 ];
+
+const whoWeHelp = ["Mechanics", "Removalists", "Electricians and tradies", "Driving schools", "Repair shops", "Venues and shops"];
 
 const why = [
   { icon: Phone, h: "A real engineer answers", p: "No ticket queue, no offshore call centre. You talk to the person doing the work." },
   { icon: Unlock, h: "No lock-in contracts", p: "Stay because the work is good, not because you are trapped. Month to month, always." },
-  { icon: Wallet, h: "Pay when you are happy", p: "Missed-Call Rescue starts with a $497 setup. The rest of our work is quoted the same way, agreed before we start." },
+  { icon: Wallet, h: "Pay when you are happy", p: "Websites start with a $497 deposit. The balance is due only when you are satisfied. Everything else is quoted the same way, agreed before we start." },
   { icon: FileText, h: "Fixed quotes, no jargon", p: "You get the scope and the price before anything starts, written in plain English." },
 ];
 
@@ -43,46 +45,25 @@ export default function Home() {
         <div className="wrap">
           <div className="grid lg:grid-cols-[1.15fr_.85fr] gap-14 items-center">
             <div>
-              <span className="tag reveal"><span className="dot" /> Missed-Call Rescue &middot; Greater Sydney</span>
-              <h1 className="reveal text-ink mt-6" style={{ fontSize: "clamp(2.7rem,6vw,4.4rem)" }}>
-                A missed call does not wait.<br />
-                <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>It just calls the next name on Google.</span>
+              <span className="tag reveal"><span className="dot" /> Websites &middot; Google visibility &middot; Greater Sydney</span>
+              <h1 className="reveal text-ink mt-6" style={{ fontSize: "clamp(2.5rem,5.6vw,4.1rem)" }}>
+                Your next customer is searching.<br />
+                <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>Make sure they find you first.</span>
               </h1>
-
-              <a
-                href={`tel:${PHONE_TEL}`}
-                aria-label={CALL_STELLA_TEXT}
-                className="reveal mt-7 inline-flex items-center gap-3 rounded-full pl-[6px] pr-6 py-[6px] border transition hover:-translate-y-0.5"
-                style={{
-                  background: "rgba(255,255,255,.4)",
-                  backdropFilter: "blur(10px)",
-                  WebkitBackdropFilter: "blur(10px)",
-                  borderColor: "rgba(255,255,255,.6)",
-                  boxShadow: "var(--shadow)",
-                }}
-              >
-                <span
-                  className="flex-none w-11 h-11 rounded-full grid place-items-center"
-                  style={{ background: "var(--coral)", color: "#fff" }}
-                >
-                  <Phone size={18} strokeWidth={2} />
-                </span>
-                <span className="text-[1.15rem] font-semibold text-ink">{CALL_STELLA_TEXT}</span>
-              </a>
-
-              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[38ch]">
-                Most callers who reach your voicemail do not leave a message. Missed-Call Rescue sends every missed caller a text within seconds, so you are still in the running while you finish the job in front of you. A local engineer installs it on your existing number and takes care of it from there.
+              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[42ch]">
+                We build fast websites with online booking, and get Sydney trades and small businesses onto page one of Google, and into the answers AI assistants give. One local engineer. Fixed prices. No lock-in.
               </p>
               <div className="reveal flex flex-wrap gap-[14px] mt-8">
-                <a className="btn btn-primary" href="https://calendly.com/abhishek-sinha-coralstonegroup/30min">Get my free audit &rarr;</a>
-                <a className="btn btn-ghost" href="#how-it-works">See how it works</a>
+                {/* Was Calendly: https://calendly.com/abhishek-sinha-coralstonegroup/30min */}
+                <Link className="btn btn-primary" href="/book/">Book a free check &rarr;</Link>
+                <Link className="btn btn-ghost" href="/our-work/">See our work</Link>
               </div>
-              <p className="reveal mt-4 text-[.86rem] text-muted">No lock-in. A local engineer sets it up, not a call centre reading a script.</p>
+              <p className="reveal mt-4 text-[.86rem] text-muted">Free, no obligation. A straight answer about where your customers are slipping away.</p>
 
               <dl className="reveal grid grid-cols-2 sm:grid-cols-4 mt-[46px] pt-6 border-t" style={{ borderColor: "var(--line)" }}>
                 {[
-                  ["Free", "No-obligation audit"],
-                  ["$497", "To get started"],
+                  ["Free", "No-obligation check"],
+                  ["Weeks", "From first chat to live site"],
                   ["No", "Lock-in contracts"],
                   ["Local", "On-site, Greater Sydney"],
                 ].map(([n, l], i) => (
@@ -95,14 +76,14 @@ export default function Home() {
             </div>
 
             <div className="reveal flex justify-center">
-              <div className="bg-paper border rounded-[24px] p-[30px] w-full max-w-[360px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
-                <Image src="/CoralStoneLogoNew.svg" alt="Coralstone" width={260} height={164} className="w-[260px] mx-auto mb-[24px]" />
+              <div className="bg-paper border rounded-[24px] p-[30px] w-full max-w-[380px]" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
+                <p className="eyebrow mb-[18px]">What you get</p>
                 <ul className="list-none">
                   {[
-                    ["Instant text back", "Sent within seconds of a missed call"],
-                    ["Works on your number", "Call forwarding, nothing new to give out"],
-                    ["Set up by a real engineer", "Registered, tested, and monitored"],
-                    ["Every rescue logged", "One simple report, sent monthly"],
+                    ["A fast, custom website", "Mobile-first, built to turn visits into calls"],
+                    ["Online booking", "Customers book while you are under a car or on a job"],
+                    ["Found on Google", "Structured so Google, and the AI people now ask, can read it"],
+                    ["One local engineer", "The person who builds it is the person who answers"],
                   ].map(([b, s], i) => (
                     <li key={b} className={`flex items-center gap-3 py-[13px] ${i > 0 ? "border-t border-dashed" : ""}`} style={{ borderColor: "var(--line)" }}>
                       <span aria-hidden="true" className="flex-none w-6 h-6 rounded-full grid place-items-center text-[.8rem]" style={{ background: "var(--ink)", color: "var(--sand)" }}>&#10003;</span>
@@ -116,46 +97,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* HOW IT WORKS */}
-      <section id="how-it-works" style={{ background: "var(--ink)", color: "var(--sand)" }}>
-        <div className="wrap py-[84px]">
-          <div className="sec-head reveal">
-            <span className="eyebrow" style={{ color: "#E8A88B" }}>How it works</span>
-            <h2 className="text-paper">Three steps. Your phone number stays the same.</h2>
-            <p style={{ color: "rgba(243,235,221,.72)" }}>
-              Missed-Call Rescue runs quietly in the background on the number you already advertise. Nothing to reprint, nothing new to learn.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-[22px]">
-            {[
-              ["1", "We forward your number", "Call forwarding on your existing business line detects the moment a call goes unanswered. No new number, no new SIM.", "Call forwarding"],
-              ["2", "The caller gets a text", "Within seconds, the missed caller receives a text letting them know you saw the call and will be in touch.", "Automatic SMS"],
-              ["3", "You get the report", "Every rescued call is logged. You receive a simple report each month showing what came in and what it was worth.", "Monthly report"],
-            ].map(([n, h, p, pill]) => (
-              <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
-                <div className="font-display text-[3.4rem] font-semibold leading-[.8]" style={{ color: "rgba(240,140,88,.92)" }}>{n}</div>
-                <h3 className="text-paper text-[1.32rem] mt-[14px] mb-[10px]">{h}</h3>
-                <p className="text-[.96rem]" style={{ color: "rgba(243,235,221,.74)" }}>{p}</p>
-                <span className="inline-block mt-[14px] text-[.72rem] uppercase tracking-wide font-semibold border rounded-full px-[10px] py-[4px]" style={{ color: "#E8A88B", borderColor: "rgba(232,168,139,.4)" }}>{pill}</span>
-              </div>
-            ))}
-          </div>
-          <p className="reveal mt-8 text-[.9rem]" style={{ color: "rgba(243,235,221,.6)" }}>
-            Setup includes carrier sender registration, the paperwork that stops your texts landing in spam or getting blocked before they reach anyone. We handle it for you.
-          </p>
-        </div>
-      </section>
+      {/* OUR WORK */}
+      <CaseStudyStrip />
 
-      {/* THREE VERTICALS */}
+      {/* WHAT WE DO */}
       <section>
         <div className="wrap py-[84px]">
           <div className="sec-head reveal">
             <span className="eyebrow">What we do</span>
-            <h2>Three ways we help Sydney small business.</h2>
+            <h2>Websites, Google visibility, and phones that get answered.</h2>
             <p>Pick what you need now. Everything is quoted up front, and none of it locks you in.</p>
           </div>
           <div className="cards">
-            {verticals.map(({ icon: Icon, h, tag, p, href }) => (
+            {services.map(({ icon: Icon, h, tag, p, href }) => (
               <div key={h} className="card reveal">
                 <div className="ico"><Icon size={22} color="var(--coral-2)" strokeWidth={1.75} /></div>
                 <h3>{h}</h3>
@@ -165,6 +119,53 @@ export default function Home() {
                   Learn more &rarr;
                 </Link>
               </div>
+            ))}
+          </div>
+          <div className="reveal mt-8 rounded-[18px] border p-6 flex flex-wrap items-center justify-between gap-4" style={{ background: "var(--paper)", borderColor: "var(--line)" }}>
+            <p className="text-muted text-[.98rem] m-0">
+              <b className="text-ink">We also keep the boring tech running.</b> Computers, networks, backups, and security, looked after by the same engineer.
+            </p>
+            <Link href="/it-support/" className="inline-flex items-center gap-1 text-[.9rem] font-semibold whitespace-nowrap" style={{ color: "var(--coral-3)" }}>
+              <Wrench size={14} strokeWidth={2} className="inline" /> IT support &rarr;
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section style={{ background: "var(--ink)", color: "var(--sand)" }}>
+        <div className="wrap py-[84px]">
+          <div className="sec-head reveal">
+            <span className="eyebrow" style={{ color: "#E8A88B" }}>How it works</span>
+            <h2 className="text-paper">Four steps. No mystery, no open-ended invoices.</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[22px]">
+            {[
+              ["1", "Free check", "Thirty minutes. We look at your site, your Google presence, and where enquires are slipping away. You keep the findings either way."],
+              ["2", "Fixed quote", "The scope and the price in writing, before anything starts."],
+              ["3", "Live in weeks", "Most sites go from first chat to live in three to six weeks."],
+              ["4", "Stay found", "Optional monthly work that keeps you climbing, and keeps you in the AI answers."],
+            ].map(([n, h, p]) => (
+              <div key={n} className="reveal rounded-[18px] p-7 border" style={{ background: "rgba(243,235,221,.06)", borderColor: "rgba(243,235,221,.18)" }}>
+                <div className="font-display text-[3.4rem] font-semibold leading-[.8]" style={{ color: "rgba(240,140,88,.92)" }}>{n}</div>
+                <h3 className="text-paper text-[1.32rem] mt-[14px] mb-[10px]">{h}</h3>
+                <p className="text-[.96rem]" style={{ color: "rgba(243,235,221,.74)" }}>{p}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE HELP */}
+      <section>
+        <div className="wrap py-[72px] text-center">
+          <div className="sec-head reveal mx-auto text-center" style={{ maxWidth: 560 }}>
+            <span className="eyebrow">Who we help</span>
+            <h2>If your customers find you on Google, we can help.</h2>
+          </div>
+          <div className="reveal flex flex-wrap justify-center gap-3">
+            {whoWeHelp.map((w) => (
+              <span key={w} className="tag" style={{ boxShadow: "none" }}>{w}</span>
             ))}
           </div>
         </div>

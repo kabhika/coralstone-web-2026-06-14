@@ -28,7 +28,7 @@ export default function ITSupport() {
       <PageHero
         eyebrow="IT support & security"
         title="The boring tech that keeps you running. Sorted."
-        intro="IT support is one of three ways we help Sydney small business, alongside AI automation and websites and SEO. Here, you get the same enterprise-grade IT that big companies pay a fortune for, priced and explained for a small business. You will always know what we did and why."
+        intro="IT support is one of three ways we help Sydney small business, alongside websites and automation. Here, you get the same enterprise-grade IT that big companies pay a fortune for, priced and explained for a small business. You will always know what we did and why."
       />
 
       <section>

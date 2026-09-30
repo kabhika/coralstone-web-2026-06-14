@@ -20,25 +20,47 @@ Cloudflare Pages, Hostinger static, S3). On Vercel, no config needed.
 ## Crawlability check (the whole point)
 After build:
     npx serve out
-    curl http://localhost:3000/ | grep "Get found online"
-You should see the headline in raw HTML. The current live site does not.
+    curl http://localhost:3000/ | grep "Make sure they find you first"
+You should see the headline in raw HTML.
 
 ## Pages
-- /            home
-- /websites     websites & search (SEO/AEO/GEO)
-- /it-support   IT support & security
-- /pricing      website packages + IT pricing
-- /about        honest founder-led about
-- /contact      details, Calendly, form
+- /                    home (websites + get-found hero, Our Work proof strip)
+- /our-work            case studies (Switch Gear, SMP, Derive, Peel Manor)
+- /get-found           Google + AI search visibility (SEO/AEO/GEO)
+- /websites            websites with online booking
+- /automation          phone and booking automation (was /ai-automation, 301 via vercel.json)
+- /missed-call-rescue  product page, linked from /automation
+- /it-support          IT support & security
+- /pricing             website packages + automation + IT pricing
+- /about               founder-led about + entity block (ACN/ABN)
+- /contact             details, Calendly, WhatsApp, form
 - /sitemap.xml, /robots.txt  auto-generated
+- 404                  custom not-found page
 
-## TODO before launch
-1. Contact form: edit app/contact/page.tsx, replace the form `action`
-   (https://formspree.io/f/your-form-id) with your real Formspree / Web3Forms
-   / Basin endpoint. Static export cannot process forms server-side.
-2. Confirm or remove claims: the old site's "25+ years", invented timeline,
-   three case studies, and "AWS Certified" badge are intentionally NOT here.
-   Add back only what is true and verifiable.
-3. Add real proof (first client win, testimonial) when you have one.
-4. Set canonical domain + verify in Google Search Console; submit sitemap.xml.
-5. Replace public/logo.png if you have a higher-res source.
+## Copy source of truth
+All customer-facing copy for the Sept 2026 restructure is in COPY-DECK.md,
+including the case study facts, what is deliberately not claimed, and the open
+sign-off items. Business facts (entity, ACN, ABN, phones, hours) live in
+lib/facts.ts and are imported everywhere. Do not hand-copy them into pages.
+
+## TODO before launch (Sept 2026 restructure)
+1. ~~Copy sign-off~~ DONE 30 Sept (see COPY-DECK.md sign-off log): pricing
+   confirmed $1,399/$1,799/$2,399 + GST, SEO monthly corrected to $800 + GST,
+   client names confirmed, OG image generated.
+2. SLOTS org: Abhi signs up at slots-peel-manor-house.vercel.app/signup with a
+   @coralstonegroup.com.au address and confirms the email. Then configure org
+   "coralstone" (see COPY-DECK sign-off log item 3 for the exact settings).
+3. E2E booking test through /book/, delete the test booking.
+4. Push to main (Vercel auto-deploys), then verify /ai-automation/ 301s.
+5. Google Search Console: verify domain, submit sitemap.xml.
+6. Create/claim the Coralstone Google Business Profile.
+7. Add analytics once the GA4 property is confirmed.
+8. Late October: capture Switch Gear rankings + booking counts, update the
+   Our Work case study with real numbers.
+9. Oz Phone Fanatics case study is drafted in COPY-DECK history but held back
+   (their domain 404s today). Add when live.
+10. Founder photo into public/ when supplied (optional, post-launch OK).
+11. Replace public/CoralStoneLogoNew.svg if a higher-res source shows up.
+
+OG image: public/og-image.png is generated from og-image.html at the repo root
+(open it in Chrome at 1200x630 and screenshot, or re-run the generation task).

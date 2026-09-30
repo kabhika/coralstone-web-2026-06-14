@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/ai-automation", "destination": "/automation/", "permanent": true },
+    { "source": "/ai-automation/", "destination": "/automation/", "permanent": true }
+  ]
+}

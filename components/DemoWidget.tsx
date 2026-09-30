@@ -11,7 +11,7 @@ export default function DemoWidget() {
           style={{ borderColor: "var(--line)", background: "var(--paper)", boxShadow: "var(--shadow)" }}
         >
           <p className="text-[1.05rem] text-charcoal">
-            Want to see it? Book the free audit and we will send the demo to your phone.
+            Want to see it? Call 1300 404 523 and talk to Stella, our AI receptionist. That is the same technology, live.
           </p>
         </div>
       </div>

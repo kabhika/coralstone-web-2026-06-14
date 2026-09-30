@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import PhoneMockup from "@/components/PhoneMockup";
 import DemoWidget from "@/components/DemoWidget";
-import CaseStudyStrip from "@/components/CaseStudyStrip";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
@@ -46,11 +45,11 @@ const faqs = [
   },
   {
     q: "What phones does it work with?",
-    a: "Any mobile on a major Australian carrier that supports conditional call forwarding. We confirm this during your audit before anything is set up.",
+    a: "Any mobile on a major Australian carrier that supports conditional call forwarding. We confirm this during your free check before anything is set up.",
   },
   {
     q: "How fast can it be live?",
-    a: "Within 10 business days of your audit.",
+    a: "Within 10 business days of your free check.",
   },
 ];
 
@@ -70,7 +69,8 @@ export default function MissedCallRescue() {
                 An automatic text goes out to every missed caller, on the number you already use, live within 10 business days.
               </p>
               <div className="reveal mt-8">
-                <a className="btn btn-primary" href="https://calendly.com/abhishek-sinha-coralstonegroup/30min">Get my free audit &rarr;</a>
+                {/* Was Calendly: https://calendly.com/abhishek-sinha-coralstonegroup/30min */}
+                <a className="btn btn-primary" href="/book/">Get my free check &rarr;</a>
               </div>
             </div>
             <div className="reveal">
@@ -135,8 +135,7 @@ export default function MissedCallRescue() {
         </div>
       </section>
 
-      {/* CASE STUDY SLOT */}
-      <CaseStudyStrip />
+      {/* CASE STUDY SLOT: reserved for the first real Missed-Call Rescue deployment */}
 
       {/* FAQ */}
       <section style={{ background: "var(--paper)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)" }}>
@@ -159,7 +158,7 @@ export default function MissedCallRescue() {
       <CTA
         eyebrow="No hard sell"
         title="Ready to stop losing calls to voicemail?"
-        body="Book a free audit. We will look at how your calls currently get missed and tell you straight whether Missed-Call Rescue is worth setting up."
+        body="Book a free check. We will look at how your calls currently get missed and tell you straight whether Missed-Call Rescue is worth setting up."
       />
     </>
   );

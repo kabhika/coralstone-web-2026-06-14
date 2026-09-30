@@ -23,10 +23,7 @@ export default function ThankYou() {
             or book a time directly below.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <a
-              href="https://calendly.com/abhishek-sinha-coralstonegroup/30min"
-              className="btn btn-primary"
-            >
+            <a href="/book/" className="btn btn-primary">
               Book a free chat now &rarr;
             </a>
             <Link href="/" className="btn btn-ghost">Back to home</Link>

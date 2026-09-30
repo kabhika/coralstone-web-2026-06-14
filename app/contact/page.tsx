@@ -1,25 +1,23 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { PHONE_ABHI_TEL, WHATSAPP_URL } from "@/lib/contact";
+import { ENTITY } from "@/lib/facts";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to Coralstone about your website or IT. Book a free 30-minute chat, email hello@coralstonegroup.com.au, or call +61 467 604 791. Sydney, NSW.",
+    "Talk to Coralstone about your website, bookings, or getting found on Google. Book a free 30-minute chat, WhatsApp us, email hello@coralstonegroup.com.au, or call Abhi on 0467 604 791. Box Hill NSW, Greater Sydney.",
 };
 
 const services = [
-  "Website Design & Development",
-  "SEO / AEO — Rank on Google",
-  "E-Commerce Store Setup",
-  "Computer setup & security (Intune / EUC)",
-  "Network & Office Setup",
-  "Cloud Migration (Microsoft 365 / Azure)",
-  "Database Migration",
-  "NAS Backup Setup",
-  "AI / Automation",
-  "Hardware Upgrades",
-  "Office IT Relocation",
+  "New website",
+  "Online booking system",
+  "Get found on Google (SEO / AEO)",
+  "E-Commerce store setup",
+  "Missed-Call Rescue and automation",
+  "IT support, computers and network",
+  "Cloud migration (Microsoft 365 / Azure)",
   "Something else",
 ];
 
@@ -38,22 +36,40 @@ export default function Contact() {
             {/* details */}
             <div className="reveal">
               <div className="grid gap-5">
-                {([
-                  [MapPin, "Sydney, New South Wales, Australia"],
-                  [Phone, "+61 467 604 791"],
-                  [Mail, "hello@coralstonegroup.com.au"],
-                  [Clock, "Mon–Fri, 8am–6pm AEST"],
-                ] as const).map(([Icon, v]) => (
-                  <div key={v} className="flex items-center gap-4">
-                    <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
-                      <Icon size={20} color="var(--coral-2)" strokeWidth={1.75} />
-                    </span>
-                    <span className="text-[1.02rem] text-charcoal">{v}</span>
-                  </div>
-                ))}
+                <div key="addr" className="flex items-center gap-4">
+                  <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                    <MapPin size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                  </span>
+                  <span className="text-[1.02rem] text-charcoal">Box Hill NSW 2765 &middot; Greater Sydney</span>
+                </div>
+                <div key="phone" className="flex items-center gap-4">
+                  <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                    <Phone size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                  </span>
+                  <a href={`tel:${PHONE_ABHI_TEL}`} className="text-[1.02rem] text-charcoal hover:text-ink">Call Abhi, 0467 604 791</a>
+                </div>
+                <div key="wa" className="flex items-center gap-4">
+                  <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                    <MessageCircle size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                  </span>
+                  <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-[1.02rem] text-charcoal hover:text-ink">WhatsApp us, any time</a>
+                </div>
+                <div key="mail" className="flex items-center gap-4">
+                  <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                    <Mail size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                  </span>
+                  <a href={`mailto:${ENTITY.email}`} className="text-[1.02rem] text-charcoal hover:text-ink">{ENTITY.email}</a>
+                </div>
+                <div key="hours" className="flex items-center gap-4">
+                  <span className="flex-none w-[44px] h-[44px] rounded-[12px] grid place-items-center" style={{ background: "var(--sand-2)" }}>
+                    <Clock size={20} color="var(--coral-2)" strokeWidth={1.75} />
+                  </span>
+                  <span className="text-[1.02rem] text-charcoal">{ENTITY.hours}</span>
+                </div>
               </div>
-              <a href="https://calendly.com/abhishek-sinha-coralstonegroup/30min" className="btn btn-primary mt-8">Book a free 30-minute chat &rarr;</a>
-              <p className="text-muted text-[.86rem] mt-4">Prefer email? Write to hello@coralstonegroup.com.au and we will reply same business day.</p>
+              {/* Was Calendly: https://calendly.com/abhishek-sinha-coralstonegroup/30min */}
+              <a href="/book/" className="btn btn-primary mt-8">Book a free 30-minute chat &rarr;</a>
+              <p className="text-muted text-[.86rem] mt-4">Prefer email? Write to {ENTITY.email} and we will reply same business day.</p>
             </div>
 
             {/* form */}

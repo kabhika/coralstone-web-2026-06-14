@@ -1,7 +1,19 @@
 import type { MetadataRoute } from "next";
 
 const base = "https://www.coralstonegroup.com.au";
-const paths = ["", "/websites", "/it-support", "/pricing", "/about", "/contact"];
+const paths = [
+  "",
+  "/websites",
+  "/get-found",
+  "/our-work",
+  "/automation",
+  "/missed-call-rescue",
+  "/it-support",
+  "/pricing",
+  "/book",
+  "/about",
+  "/contact",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return paths.map((p) => ({

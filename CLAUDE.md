@@ -27,22 +27,30 @@ The headline must appear in raw HTML.
 
 ## Pages
 
-- /              home
-- /websites      websites & search (SEO/AEO/GEO)
+- /              home (websites + get-found hero, Our Work proof strip)
+- /our-work      case studies (Switch Gear, SMP, Derive, Peel Manor)
+- /get-found     Google + AI search visibility (SEO/AEO/GEO)
+- /websites      websites with online booking
+- /automation    phone and booking automation (was /ai-automation, 301 via vercel.json)
+- /missed-call-rescue  product page, linked from /automation
 - /it-support    IT support & security
-- /pricing       website packages + IT pricing
-- /about         founder-led about
-- /contact       details, Calendly, form
+- /pricing       website packages + automation + IT pricing
+- /about         founder-led about + entity block (ACN/ABN)
+- /contact       details, Calendly, WhatsApp, form
 - /thank-you     post-submit
-- /sitemap.xml, /robots.txt  auto-generated
+- /sitemap.xml, /robots.txt  auto-generated, 404 custom
 
 ## Positioning
 
-Sells to small businesses and tradies in Greater Sydney. Three verticals: AI
-Automation, IT Support, Websites and SEO. Flagship product: Missed-Call
-Rescue ($497 setup + $79/mo). Only sitewide CTA is the free audit (Calendly
-link already in the codebase). Services with no listed price end with "We
-assess this in your free audit."
+Sells to small businesses and tradies in Greater Sydney. Leads with websites
+plus online booking and Google/AI-search visibility (the work with real named
+deployments). Automation is sold one click deeper, in plain English. Missed-Call
+Rescue ($497 setup + $79/mo) is a product on /automation/, not the homepage
+offer. Sitewide CTA is the free check (Calendly link in lib/facts.ts). Stella's
+1300 404 523 line is a live demo on /automation/ only; the sitewide phone is
+Abhi's mobile. Entity facts (ACN 690 335 034, ABN, address) live in
+lib/facts.ts and must be imported, never hand-copied. Case study copy must stay
+within the recorded facts in COPY-DECK.md.
 
 ## Content rules (all customer-facing copy)
 
@@ -90,13 +98,7 @@ assess this in your free audit."
 - Never touch DNS, domain, or Vercel project settings.
 - Commit per logical change, one-line message.
 
-## Before launch (carried over, still open)
+## Before launch (Sept 2026 restructure)
 
-1. Contact form: `app/contact/page.tsx` posts to Web3Forms (see recent
-   commit) — confirm the real endpoint/key is live, not a placeholder.
-2. Confirm or remove claims: no "25+ years", no invented timeline, no case
-   studies, no "AWS Certified" badge unless true and verifiable.
-3. Add real proof (first client win, testimonial) once one exists.
-4. Set canonical domain, verify in Google Search Console, submit
-   sitemap.xml.
-5. Replace public/logo.png if a higher-res source shows up.
+Tracked in README.md "TODO before launch". Copy sign-off items live in
+COPY-DECK.md section 2. Nothing deploys until Abhi signs off the copy deck.

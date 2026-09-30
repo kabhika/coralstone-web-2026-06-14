@@ -6,8 +6,32 @@ import CTA from "@/components/CTA";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Transparent pricing for AI automation, IT support, and websites and SEO. Missed-Call Rescue from $497 setup + $79/mo. IT and website work is quoted after your free audit. No lock-in.",
+    "Website packages from $1,399 + GST with online booking and search setup included. Missed-Call Rescue from $497 setup + $79/mo, IT support from $120/hr. No lock-in, pay when happy.",
 };
+
+const web = [
+  {
+    name: "Starter",
+    desc: "For trades and small businesses that need a sharp, professional presence.",
+    price: "$1,399",
+    pop: false,
+    items: ["Up to 5 pages", "Mobile-first, fast design", "Professional copywriting", "Google setup & basic SEO", "Contact form & 1 year hosting", "30 days post-launch support"],
+  },
+  {
+    name: "Business + Search",
+    desc: "For businesses that want to rank on Google and take bookings online.",
+    price: "$1,799",
+    pop: true,
+    items: ["Everything in Starter", "Up to 15 pages", "Online booking on our own platform", "Advanced SEO + AEO setup", "Analytics & Search Console", "Competitor keyword analysis", "Blog & speed optimisation", "Ongoing SEO from $800/mo (optional)"],
+  },
+  {
+    name: "Online Store",
+    desc: "For selling products online, with payments and stock built in.",
+    price: "$2,399",
+    pop: false,
+    items: ["Everything in Business + Search", "Up to 50 products", "Card payments (Stripe / PayPal)", "Cart, checkout & accounts", "Stock management", "Shipping & pickup options"],
+  },
+];
 
 const ai = [
   {
@@ -30,7 +54,7 @@ const ai = [
   },
   {
     name: "Customer Reactivation",
-    desc: "A one-off text campaign to your existing customer list, with a simple offer that brings past customers back. Scoped in your free audit.",
+    desc: "A one-off text campaign to your existing customer list, with a simple offer that brings past customers back. Scoped in your free check.",
     price: "From $750",
     priceNote: "+ GST · one-off",
     href: "/contact/",
@@ -38,35 +62,11 @@ const ai = [
   },
   {
     name: "Stella, AI Receptionist",
-    desc: "A managed AI that answers your phone, books jobs, and texts you the summary. Scoped in your free audit.",
+    desc: "A managed AI that answers your phone, books jobs, and texts you the summary. Scoped in your free check.",
     price: "From $399",
     priceNote: "+ GST /mo",
-    href: "/contact/",
-    cta: "Get a quote",
-  },
-];
-
-const web = [
-  {
-    name: "Starter",
-    desc: "For trades and small businesses that need a sharp, professional presence.",
-    price: "$899",
-    pop: false,
-    items: ["Up to 5 pages", "Mobile-first, fast design", "Professional copywriting", "Google setup & basic SEO", "Contact form & 1 year hosting", "30 days post-launch support"],
-  },
-  {
-    name: "Business + Search",
-    desc: "For businesses that want to rank on Google and bring in leads.",
-    price: "$1,399",
-    pop: true,
-    items: ["Everything in Starter", "Up to 15 pages", "Advanced SEO + AEO setup", "Analytics & Search Console", "Competitor keyword analysis", "Blog & speed optimisation", "Ongoing SEO from $300/mo (optional)"],
-  },
-  {
-    name: "Online Store",
-    desc: "For selling products online, with payments and stock built in.",
-    price: "$1,799",
-    pop: false,
-    items: ["Everything in Business + Search", "Up to 50 products", "Card payments (Stripe / PayPal)", "Cart, checkout & accounts", "Stock management", "Shipping & pickup options"],
+    href: "/automation/",
+    cta: "Try the demo",
   },
 ];
 
@@ -123,46 +123,16 @@ export default function Pricing() {
       <PageHero
         eyebrow="Pricing"
         title="Transparent. No surprises."
-        intro="AI automation has set prices below. Websites, SEO, and IT support are quoted after your free audit. No lock-in, ever, and you only pay when you are happy with the work."
+        intro="Website prices are right here. Automation and IT support are quoted after a free check, and anything monthly is month to month. You only pay when you are happy with the work."
       />
 
-      {/* AI AUTOMATION */}
-      <section>
-        <div className="wrap py-[64px]">
-          <div className="sec-head reveal" style={{ maxWidth: 680 }}>
-            <span className="eyebrow">AI automation</span>
-            <h2>Start with the one that pays for itself first.</h2>
-            <p>No lock-in on any of these. Cancel any month.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {ai.map((t) => (
-              <Tier key={t.name}>
-                <h3 className="text-ink text-[1.15rem] min-h-[38px]">{t.name}</h3>
-                <p className="text-muted text-[.88rem] mt-2 mb-[16px]">{t.desc}</p>
-                <div className="mt-auto">
-                  <div className="font-display text-[1.9rem] font-semibold text-charcoal leading-none">
-                    {t.price} <small className="text-[.78rem] font-sans text-muted font-medium">{t.priceNote}</small>
-                  </div>
-                  {t.price2 && (
-                    <div className="font-display text-[1.4rem] font-semibold text-charcoal leading-none mt-1">
-                      {t.price2} <small className="text-[.78rem] font-sans text-muted font-medium">{t.price2Note}</small>
-                    </div>
-                  )}
-                  <Link href={t.href} className="btn btn-ghost justify-center w-full mt-4">{t.cta}</Link>
-                </div>
-              </Tier>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* WEBSITES */}
-      <section style={{ background: "var(--sand-2)", borderTop: "1px solid var(--line)" }}>
+      <section>
         <div className="wrap py-[72px]">
           <div className="sec-head reveal" style={{ maxWidth: 680 }}>
-            <span className="eyebrow">Websites and SEO</span>
+            <span className="eyebrow">Websites</span>
             <h2>One-time. No hidden charges.</h2>
-            <p>A fixed quote confirmed in your free audit. A small deposit to start, the balance only when you are fully happy.</p>
+            <p>A fixed quote confirmed in your free check. A small deposit to start, the balance only when you are fully happy.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {web.map((t) => (
@@ -172,8 +142,8 @@ export default function Pricing() {
                 <p className="text-muted text-[.9rem] mt-2 mb-[18px]">{t.desc}</p>
                 <div className="mt-auto">
                   <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
-                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price} <small className="text-[.85rem] font-sans text-muted font-medium">+ GST</small></div>
-                  <ul className="list-none my-5 grid gap-[10px]">
+                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none whitespace-nowrap">{t.price} <small className="text-[.85rem] font-sans text-muted font-medium">+ GST</small></div>
+                  <ul className="list-none mt-5 mb-[32px] grid gap-[10px]">
                     {t.items.map((i) => (
                       <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
                     ))}
@@ -187,13 +157,43 @@ export default function Pricing() {
         </div>
       </section>
 
+      {/* AUTOMATION */}
+      <section style={{ background: "var(--sand-2)", borderTop: "1px solid var(--line)" }}>
+        <div className="wrap py-[64px]">
+          <div className="sec-head reveal" style={{ maxWidth: 680 }}>
+            <span className="eyebrow">Automation</span>
+            <h2>Start with the one that pays for itself first.</h2>
+            <p>No lock-in on any of these. Cancel any month.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {ai.map((t) => (
+              <Tier key={t.name}>
+                <h3 className="text-ink text-[1.15rem] min-h-[38px]">{t.name}</h3>
+                <p className="text-muted text-[.88rem] mt-2 mb-[16px]">{t.desc}</p>
+                <div className="mt-auto">
+                  <div className="font-display text-[1.9rem] font-semibold text-charcoal leading-none whitespace-nowrap">
+                    {t.price} <small className="text-[.78rem] font-sans text-muted font-medium">{t.priceNote}</small>
+                  </div>
+                  {t.price2 && (
+                    <div className="font-display text-[1.4rem] font-semibold text-charcoal leading-none mt-1 whitespace-nowrap">
+                      {t.price2} <small className="text-[.78rem] font-sans text-muted font-medium">{t.price2Note}</small>
+                    </div>
+                  )}
+                  <Link href={t.href} className="btn btn-ghost justify-center w-full mt-4">{t.cta}</Link>
+                </div>
+              </Tier>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* IT */}
       <section>
         <div className="wrap py-[64px]">
           <div className="sec-head reveal" style={{ maxWidth: 680 }}>
             <span className="eyebrow">IT support</span>
             <h2>Pay for what you use.</h2>
-            <p>Fixed quotes and simple monthly options, confirmed in your free audit. No lock-in on any of these.</p>
+            <p>Fixed quotes and simple monthly options, confirmed in your free check. No lock-in on any of these.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {it.map((t) => (
@@ -204,9 +204,9 @@ export default function Pricing() {
                 <p className="text-muted text-[.9rem] mt-2 mb-[18px]">{t.desc}</p>
                 <div className="mt-auto">
                   <div className="text-[.78rem] uppercase tracking-wider text-muted font-semibold">Starting from</div>
-                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none">{t.price}<small className="text-[.95rem] font-sans text-muted font-medium">{t.unit} + GST</small></div>
+                  <div className="font-display text-[2.5rem] font-semibold text-charcoal leading-none whitespace-nowrap">{t.price}<small className="text-[.95rem] font-sans text-muted font-medium">{t.unit} + GST</small></div>
                   <div className="text-[.8rem] text-muted mt-1">{t.note}</div>
-                  <ul className="list-none my-5 grid gap-[10px]">
+                  <ul className="list-none mt-5 mb-[32px] grid gap-[10px]">
                     {t.items.map((i) => (
                       <li key={i} className="flex gap-[10px] text-[.92rem] text-charcoal"><span className="font-extrabold" style={{ color: "var(--coral)" }}>&#10003;</span>{i}</li>
                     ))}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>OG image template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: 'Hanken Grotesk', system-ui, sans-serif;
+    background: #F3EBDD;
+    background-image:
+      radial-gradient(900px 460px at 82% -10%, rgba(216,105,55,.12), transparent 60%),
+      radial-gradient(700px 500px at -8% 40%, rgba(18,32,82,.08), transparent 55%);
+    color: #122052;
+  }
+  .card {
+    width: 1200px; height: 630px;
+    padding: 64px 72px 56px;
+    display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .logo { height: 88px; width: auto; }
+  .eyebrow {
+    font-size: 20px; letter-spacing: .22em; text-transform: uppercase;
+    font-weight: 700; color: #A44923; margin-bottom: 22px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600; font-size: 78px; line-height: 1.04; letter-spacing: -0.015em;
+    max-width: 15ch;
+  }
+  h1 em { font-style: italic; font-weight: 500; color: #C15629; }
+  .foot {
+    border-top: 1px solid rgba(42,39,34,.18);
+    padding-top: 26px;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .foot .url { font-size: 26px; font-weight: 700; }
+  .foot .cta {
+    font-size: 22px; font-weight: 700; color: #fff;
+    background: #D86937; border-radius: 999px; padding: 14px 30px;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="public/CoralStoneLogoNew.svg" alt="Coralstone Services Group">
+    <div>
+      <div class="eyebrow">Websites &middot; Google visibility &middot; Greater Sydney</div>
+      <h1>Your next customer is searching. <em>Make sure they find you first.</em></h1>
+    </div>
+    <div class="foot">
+      <div class="url">coralstonegroup.com.au</div>
+      <div class="cta">Book a free check</div>
+    </div>
+  </div>
+</body>
+</html>
