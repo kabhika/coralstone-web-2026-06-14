@@ -7,7 +7,7 @@ import { ENTITY } from "@/lib/facts";
 // SLOTS production origin. Overridable at build time for local review
 // against a dev booking server (BOOKING_ORIGIN=http://localhost:3100).
 const BOOKING_ORIGIN =
-  process.env.BOOKING_ORIGIN ?? "https://slots-peel-manor-house.vercel.app";
+  process.env.BOOKING_ORIGIN ?? "https://book.coralstonegroup.com.au";
 const BOOKING_URL = `${BOOKING_ORIGIN}/o/coralstone-services-group/free-check`;
 
 export const metadata: Metadata = {
