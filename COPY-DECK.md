@@ -87,12 +87,12 @@ About and Contact stay in the footer. Header phone pill is now your mobile
 
 TAG: Websites · Google visibility · Greater Sydney
 
-H1: Your next customer is searching.
-(second line, terracotta italic) Make sure they find you first.
+H1: At Coralstone, building your website is only the start.
+(second line, terracotta italic) We find you customers and get you booked and busy.
 
-Sub: We build fast websites with online booking, and get Sydney trades and small
-businesses onto page one of Google, and into the answers AI assistants give.
-One local engineer. Fixed prices. No lock-in.
+Sub: We build your website and get you found on Google and in AI search. Then we
+add online booking, automation and custom apps that save you time, plus marketing
+that brings in more customers. One local engineer. Fixed prices. No lock-in.
 
 CTAs: [Book a free check ->] [See our work]
 Microcopy: Free, no obligation. A straight answer about where your customers are

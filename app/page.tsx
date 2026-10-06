@@ -47,11 +47,11 @@ export default function Home() {
             <div>
               <span className="tag reveal"><span className="dot" /> Websites &middot; Google visibility &middot; Greater Sydney</span>
               <h1 className="reveal text-ink mt-6" style={{ fontSize: "clamp(2.5rem,5.6vw,4.1rem)" }}>
-                Your next customer is searching.<br />
-                <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>Make sure they find you first.</span>
+                At Coralstone, building your website is only the start.<br />
+                <span className="italic font-medium" style={{ color: "var(--coral-2)" }}>We find you customers and get you booked and busy.</span>
               </h1>
-              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[42ch]">
-                We build fast websites with online booking, and get Sydney trades and small businesses onto page one of Google, and into the answers AI assistants give. One local engineer. Fixed prices. No lock-in.
+              <p className="reveal mt-[22px] text-[1.18rem] text-muted max-w-[50ch]">
+                We build your website and get you found on Google and in AI search. Then we add online booking, automation and custom apps that save you time, plus marketing that brings in more customers. One local engineer. Fixed prices. No lock-in.
               </p>
               <div className="reveal flex flex-wrap gap-[14px] mt-8">
                 {/* Was Calendly: https://calendly.com/abhishek-sinha-coralstonegroup/30min */}

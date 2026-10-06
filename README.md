@@ -20,7 +20,7 @@ Cloudflare Pages, Hostinger static, S3). On Vercel, no config needed.
 ## Crawlability check (the whole point)
 After build:
     npx serve out
-    curl http://localhost:3000/ | grep "Make sure they find you first"
+    curl http://localhost:3000/ | grep "building your website is only the start"
 You should see the headline in raw HTML.
 
 ## Pages
