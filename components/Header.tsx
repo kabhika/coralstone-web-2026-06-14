@@ -53,9 +53,9 @@ export default function Header() {
             <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-16 md:h-24 w-auto" priority />
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <div className="flex gap-[30px] font-medium text-[1.02rem]">
+            <div className="flex gap-5 lg:gap-[30px] font-medium text-[1.02rem]">
               {links.map((l) => (
-                <Link key={l.href} href={l.href} className="text-charcoal/80 hover:text-ink transition">
+                <Link key={l.href} href={l.href} className="text-charcoal/80 hover:text-ink transition whitespace-nowrap">
                   {l.label}
                 </Link>
               ))}
@@ -63,7 +63,7 @@ export default function Header() {
             <a
               href={`tel:${PHONE_ABHI_TEL}`}
               aria-label={PHONE_ABHI_TEXT}
-              className="inline-flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 text-[.92rem] font-semibold text-ink transition whitespace-nowrap shrink-0 border"
+              className="hidden lg:inline-flex items-center gap-2 rounded-full pl-2 pr-3 py-1.5 text-[.92rem] font-semibold text-ink transition whitespace-nowrap shrink-0 border"
               style={{ borderColor: "var(--line)", background: "var(--paper)" }}
             >
               <span className="flex-none w-6 h-6 rounded-full grid place-items-center" style={{ background: "var(--coral)", color: "#fff" }}>
