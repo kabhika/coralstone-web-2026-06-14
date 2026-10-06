@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header
       className="sticky top-0 z-50 border-b backdrop-blur-md"
-      style={{ background: "rgba(243,235,221,.6)", borderColor: "var(--line)" }}
+      style={{ background: "rgba(243,235,221,.45)", borderColor: "var(--line)" }}
     >
       <div className="wrap">
         <nav className="flex items-center justify-between py-1 md:py-2">
