@@ -45,10 +45,10 @@ export default function Header() {
   return (
     <header
       className="sticky top-0 z-50 border-b backdrop-blur-md"
-      style={{ background: "rgba(243,235,221,.82)", borderColor: "var(--line)" }}
+      style={{ background: "rgba(243,235,221,.6)", borderColor: "var(--line)" }}
     >
       <div className="wrap">
-        <nav className="flex items-center justify-between py-3 md:py-5">
+        <nav className="flex items-center justify-between py-1 md:py-2">
           <Link href="/" className="flex items-center flex-none">
             <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-32 lg:h-48 w-auto" priority />
           </Link>
