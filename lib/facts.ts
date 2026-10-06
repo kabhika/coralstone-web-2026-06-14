@@ -4,7 +4,7 @@ export const ENTITY = {
   legalName: "Coralstone Services Group Pty Ltd",
   tradingName: "Coralstone Services Group",
   acn: "690 335 034",
-  abn: "13 080 859 721",
+  abn: "51 690 335 034",
   suburb: "Box Hill NSW 2765",
   region: "Sydney, NSW, Australia",
   email: "hello@coralstonegroup.com.au",

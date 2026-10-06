@@ -358,7 +358,7 @@ organisations..." (rest of current copy kept)
 NEW entity block (card at the end of the body):
 Coralstone Services Group Pty Ltd
 ACN 690 335 034
-ABN 13 080 859 721
+ABN 51 690 335 034
 Box Hill NSW 2765, Australia
 Mon-Fri 8am-6pm AEST
 
@@ -379,7 +379,7 @@ else
 ## 12. Footer (every page)
 
 Line 1: (c) 2026 Coralstone Services Group Pty Ltd · ACN 690 335 034 ·
-ABN 13 080 859 721 · Box Hill NSW 2765, Australia
+ABN 51 690 335 034 · Box Hill NSW 2765, Australia
 Line 2 links: Websites · Get Found · Our Work · Automation · IT Support ·
 Pricing · About · Contact
 Line 3: hello@coralstonegroup.com.au · Call Abhi, 0467 604 791 · Mon-Fri 8am-6pm

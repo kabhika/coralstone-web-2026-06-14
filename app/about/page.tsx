@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import PageHero from "@/components/PageHero";
 import CTA from "@/components/CTA";
+import { ENTITY } from "@/lib/facts";
 
 export const metadata: Metadata = {
   title: "About",
@@ -45,7 +46,7 @@ export default function About() {
             <div className="reveal mt-8 bg-paper border rounded-[18px] p-6 not-prose" style={{ borderColor: "var(--line)", boxShadow: "var(--shadow)" }}>
               <p className="m-0 text-[.95rem] text-charcoal leading-[1.9]">
                 <b className="text-ink">Coralstone Services Group Pty Ltd</b><br />
-                ACN 690 335 034 &middot; ABN 13 080 859 721<br />
+                ACN {ENTITY.acn} &middot; ABN {ENTITY.abn}<br />
                 Box Hill NSW 2765, Australia<br />
                 Mon-Fri 8am-6pm AEST
               </p>
