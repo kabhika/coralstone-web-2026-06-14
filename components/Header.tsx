@@ -50,7 +50,7 @@ export default function Header() {
       <div className="wrap">
         <nav className="flex items-center justify-between py-3 md:py-5">
           <Link href="/" className="flex items-center flex-none">
-            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-16 md:h-24 w-auto" priority />
+            <Image src="/CoralStoneLogoNew.svg" alt="Coralstone Services Group" width={102} height={64} className="h-32 lg:h-48 w-auto" priority />
           </Link>
           <div className="hidden md:flex items-center gap-8">
             <div className="flex gap-5 lg:gap-[30px] font-medium text-[1.02rem]">
